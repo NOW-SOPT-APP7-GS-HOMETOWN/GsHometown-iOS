@@ -5,7 +5,7 @@
 //  Created by 한지석 on 5/13/24.
 //
 
-import Foundation
+import UIKit
 
 extension UICollectionViewLayout {
     static func pageSection(type: PageType) -> NSCollectionLayoutSection {
@@ -77,12 +77,23 @@ extension UICollectionViewLayout {
         )
         let largeItem = NSCollectionLayoutItem(layoutSize: largeSize)
 
-        let horizentalGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
-        let horizentalGroup = NSCollectionLayoutGroup.horizontal(layoutSize: horizentalGroupSize, subitems: [smallItem, smallItem])
+        let horizentalGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(0.5)
+        )
+        let horizentalGroup = NSCollectionLayoutGroup.horizontal(
+            layoutSize: horizentalGroupSize,
+            subitems: [smallItem, smallItem]
+        )
 
-        let verticalGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
-        let verticalGroup = NSCollectionLayoutGroup.vertical(layoutSize: verticalGroupSize, subitems: [horizentalGroup, middleItem])
-
+        let verticalGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.5),
+            heightDimension: .fractionalHeight(1)
+        )
+        let verticalGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: verticalGroupSize,
+            subitems: [horizentalGroup, middleItem]
+        )
 
         let groupHeight: CGFloat = 181
         let groupSize = NSCollectionLayoutSize(
@@ -126,6 +137,71 @@ extension UICollectionViewLayout {
             trailing: .fixed(edge),
             bottom: .none)
 
+        let section = NSCollectionLayoutSection(group: group)
+        return section
+    }
+
+    static func eventLayout() -> NSCollectionLayoutSection {
+        let smallSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(0.33)
+        )
+        let smallItem = NSCollectionLayoutItem(layoutSize: smallSize)
+
+        let largeSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.65),
+            heightDimension: .fractionalHeight(1.0)
+        )
+        let largeItem = NSCollectionLayoutItem(layoutSize: largeSize)
+
+        let verticalGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.25),
+            heightDimension: .fractionalHeight(1)
+        )
+        let verticalGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: verticalGroupSize,
+            subitems: [smallItem]
+        )
+        verticalGroup.interItemSpacing = .fixed(12)
+
+        let groupHeight: CGFloat = 270
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(groupHeight)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [largeItem, verticalGroup]
+        )
+        group.interItemSpacing = .fixed(10)
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(
+            top: 0,
+            leading: 16,
+            bottom: 0,
+            trailing: 0
+        )
+
+        return section
+    }
+
+    static func eventOfTheWeekLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(1)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(71)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        
         let section = NSCollectionLayoutSection(group: group)
         return section
     }
