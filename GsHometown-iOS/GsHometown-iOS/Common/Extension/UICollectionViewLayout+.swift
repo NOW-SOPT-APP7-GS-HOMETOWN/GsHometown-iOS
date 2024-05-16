@@ -64,18 +64,36 @@ extension UICollectionViewLayout {
             heightDimension: .fractionalHeight(1)
         )
         let smallItem = NSCollectionLayoutItem(layoutSize: smallSize)
+        smallItem.contentInsets = .init(
+            top: 10,
+            leading: 9,
+            bottom: 10,
+            trailing: 0
+        )
 
         let middleSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .fractionalHeight(0.5)
         )
         let middleItem = NSCollectionLayoutItem(layoutSize: middleSize)
+        middleItem.contentInsets = .init(
+            top: 0,
+            leading: 9,
+            bottom: 10,
+            trailing: 0
+        )
 
         let largeSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.5),
             heightDimension: .fractionalHeight(1.0)
         )
         let largeItem = NSCollectionLayoutItem(layoutSize: largeSize)
+        largeItem.contentInsets = .init(
+            top: 10, 
+            leading: 0,
+            bottom: 10,
+            trailing: 0
+        )
 
         let horizentalGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -138,6 +156,10 @@ extension UICollectionViewLayout {
             bottom: .none)
 
         let section = NSCollectionLayoutSection(group: group)
+        let backgroundItem = NSCollectionLayoutDecorationItem.background(elementKind: ServiceReusableView.identifier)
+        section.decorationItems = [backgroundItem]
+        section.contentInsets.top = 52
+
         return section
     }
 

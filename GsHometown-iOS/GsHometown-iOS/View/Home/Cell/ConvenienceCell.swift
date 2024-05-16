@@ -26,6 +26,7 @@ final class ConvenienceCell: UICollectionViewCell {
     }
 
     private func setStyle() {
+        self.backgroundColor = .white
         self.layer.cornerRadius = 20
     }
 
