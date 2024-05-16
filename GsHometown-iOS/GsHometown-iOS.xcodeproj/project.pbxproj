@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
+		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
+		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
+		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
+		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
 		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF4889152BF61ACA007F9C11 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				AF4889162BF61AD5007F9C11 /* EventReusableView.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
 		AFC8ABF72BEF440B005EAE74 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +209,7 @@
 			children = (
 				AFC8AC372BF0FD28005EAE74 /* dummy7.swift */,
 				AFC8AC962BF1F03E005EAE74 /* Advertisement.swift */,
+				AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +247,7 @@
 				AFC8AC272BEF47C0005EAE74 /* UIColor+.swift */,
 				AFC8AC942BF1EFA5005EAE74 /* UICollectionViewCell+.swift */,
 				AFC8ACAF2BF22ADD005EAE74 /* UICollectionViewLayout+.swift */,
+				AF4889182BF61B15007F9C11 /* NotificationName+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -309,6 +325,7 @@
 		AFC8AC392BF0FD39005EAE74 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AF4889152BF61ACA007F9C11 /* ReusableView */,
 				AFC8ACBE2BF26EDA005EAE74 /* Cell */,
 				AFC8ACB72BF26DF9005EAE74 /* Type */,
 				AFC8AC072BEF440B005EAE74 /* ViewController.swift */,
@@ -487,6 +504,7 @@
 				AFC8ACB02BF22ADD005EAE74 /* UICollectionViewLayout+.swift in Sources */,
 				AFC8AC442BF0FD61005EAE74 /* dummy3.swift in Sources */,
 				AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */,
+				AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */,
 				AFC8AC952BF1EFA5005EAE74 /* UICollectionViewCell+.swift in Sources */,
 				AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */,
 				AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */,
@@ -494,11 +512,13 @@
 				AFC8AC762BF104C4005EAE74 /* GsPlugin.swift in Sources */,
 				AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */,
 				AFC8ACAE2BF22AB8005EAE74 /* PageType.swift in Sources */,
+				AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */,
 				AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */,
 				AFC8AC282BEF47C0005EAE74 /* UIColor+.swift in Sources */,
 				AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */,
 				AFC8ACAC2BF223C3005EAE74 /* ServiceCell.swift in Sources */,
 				AFC8AC972BF1F03E005EAE74 /* Advertisement.swift in Sources */,
+				AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */,
 				AFC8AC9B2BF20B99005EAE74 /* OrderServiceCell.swift in Sources */,
 				AFC8ACB62BF2684F005EAE74 /* EventOfTheWeekCell.swift in Sources */,
 				AFC8ACB22BF25ED3005EAE74 /* EventCell.swift in Sources */,
