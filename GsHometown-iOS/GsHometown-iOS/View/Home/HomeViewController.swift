@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
     private func makeCollectionView() {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.scrollDirection = .horizontal
+
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             return HomeSectionType(rawValue: sectionIndex)?.createSection()
         }
@@ -39,11 +40,16 @@ class HomeViewController: UIViewController {
             EventReusableView.self,
             forDecorationViewOfKind: EventReusableView.identifier
         )
+        layout.register(
+            ServiceReusableView.self,
+            forDecorationViewOfKind: ServiceReusableView.identifier
+        )
         self.collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: layout
         )
         self.collectionView!.backgroundColor = GSColor.grey02
+        self.collectionView!.showsVerticalScrollIndicator = false
         self.collectionView!.delegate = self
         self.collectionView!.dataSource = self
         registerCells()

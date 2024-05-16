@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596612BF67D8500E96991 /* SegmentControl.swift */; };
+		74C5966B2BF68BD000E96991 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5966A2BF68BD000E96991 /* UIView+.swift */; };
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
+		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
 		AFC8AC082BEF440B005EAE74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC072BEF440B005EAE74 /* ViewController.swift */; };
@@ -25,7 +28,6 @@
 		AFC8AC422BF0FD5D005EAE74 /* dummy4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC412BF0FD5D005EAE74 /* dummy4.swift */; };
 		AFC8AC442BF0FD61005EAE74 /* dummy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC432BF0FD61005EAE74 /* dummy3.swift */; };
 		AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC452BF0FD67005EAE74 /* dummy1.swift */; };
-		AFC8AC482BF0FD88005EAE74 /* dummy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC472BF0FD88005EAE74 /* dummy2.swift */; };
 		AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC492BF0FDB8005EAE74 /* GSFont.swift */; };
 		AFC8AC6A2BF101A9005EAE74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC692BF101A9005EAE74 /* Main.storyboard */; };
 		AFC8AC762BF104C4005EAE74 /* GsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC752BF104C4005EAE74 /* GsPlugin.swift */; };
@@ -63,9 +65,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74C596612BF67D8500E96991 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		74C5966A2BF68BD000E96991 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
+		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +89,6 @@
 		AFC8AC412BF0FD5D005EAE74 /* dummy4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy4.swift; sourceTree = "<group>"; };
 		AFC8AC432BF0FD61005EAE74 /* dummy3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy3.swift; sourceTree = "<group>"; };
 		AFC8AC452BF0FD67005EAE74 /* dummy1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy1.swift; sourceTree = "<group>"; };
-		AFC8AC472BF0FD88005EAE74 /* dummy2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy2.swift; sourceTree = "<group>"; };
 		AFC8AC492BF0FDB8005EAE74 /* GSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSFont.swift; sourceTree = "<group>"; };
 		AFC8AC692BF101A9005EAE74 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFC8AC6C2BF103DC005EAE74 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -234,7 +238,7 @@
 		AFC8AC1D2BEF446B005EAE74 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				AFC8AC472BF0FD88005EAE74 /* dummy2.swift */,
+				74C596612BF67D8500E96991 /* SegmentControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -246,6 +250,7 @@
 				AFC8AC942BF1EFA5005EAE74 /* UICollectionViewCell+.swift */,
 				AFC8ACAF2BF22ADD005EAE74 /* UICollectionViewLayout+.swift */,
 				AF4889182BF61B15007F9C11 /* NotificationName+.swift */,
+				74C5966A2BF68BD000E96991 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				AFC8ACB72BF26DF9005EAE74 /* Type */,
 				AFC8AC072BEF440B005EAE74 /* ViewController.swift */,
 				AFC8AC8E2BF1EC47005EAE74 /* HomeViewController.swift */,
+				AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -491,7 +497,6 @@
 			files = (
 				AFC8AC082BEF440B005EAE74 /* ViewController.swift in Sources */,
 				AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */,
-				AFC8AC482BF0FD88005EAE74 /* dummy2.swift in Sources */,
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
@@ -505,12 +510,15 @@
 				AFC8AC952BF1EFA5005EAE74 /* UICollectionViewCell+.swift in Sources */,
 				AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */,
 				AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */,
+				AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */,
 				AFC8AC762BF104C4005EAE74 /* GsPlugin.swift in Sources */,
 				AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */,
+				74C5966B2BF68BD000E96991 /* UIView+.swift in Sources */,
 				AFC8ACAE2BF22AB8005EAE74 /* PageType.swift in Sources */,
 				AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */,
 				AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */,
 				AFC8AC282BEF47C0005EAE74 /* UIColor+.swift in Sources */,
+				74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */,
 				AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */,
 				AFC8ACAC2BF223C3005EAE74 /* ServiceCell.swift in Sources */,
 				AFC8AC972BF1F03E005EAE74 /* Advertisement.swift in Sources */,

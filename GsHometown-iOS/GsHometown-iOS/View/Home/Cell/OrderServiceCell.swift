@@ -39,6 +39,18 @@ final class OrderServiceCell: UICollectionViewCell {
             $0.font = GSFont.b4m
             $0.textColor = GSColor.grey10
         }
+        pickUpButton.do {
+            $0.layer.cornerRadius = 20
+            $0.backgroundColor = .white
+        }
+        deliveryButton.do {
+            $0.layer.cornerRadius = 20
+            $0.backgroundColor = .white
+        }
+        preOrderButton.do {
+            $0.layer.cornerRadius = 14
+            $0.backgroundColor = .white
+        }
     }
 
     private func setUI() {
@@ -65,14 +77,15 @@ final class OrderServiceCell: UICollectionViewCell {
         pickUpButton.snp.makeConstraints {
             $0.top.equalTo(subTitleLabel.snp.bottom).offset(8)
             $0.leading.equalToSuperview().inset(16)
-            $0.width.equalTo(64)
+            $0.trailing.equalTo(deliveryButton.snp.leading).offset(-8)
             $0.height.equalTo(58)
         }
         deliveryButton.snp.makeConstraints {
             $0.top.equalTo(subTitleLabel.snp.bottom).offset(8)
+            $0.leading.equalTo(pickUpButton.snp.trailing).offset(8)
             $0.trailing.equalToSuperview().inset(16)
-            $0.width.equalTo(64)
             $0.height.equalTo(58)
+            $0.width.equalTo(pickUpButton.snp.width)
         }
         preOrderButton.snp.makeConstraints {
             $0.top.equalTo(pickUpButton.snp.bottom).offset(8)
