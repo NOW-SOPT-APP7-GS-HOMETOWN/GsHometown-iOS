@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596612BF67D8500E96991 /* SegmentControl.swift */; };
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74C596612BF67D8500E96991 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC8AC472BF0FD88005EAE74 /* dummy2.swift */,
+				74C596612BF67D8500E96991 /* SegmentControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */,
 				AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */,
 				AFC8AC282BEF47C0005EAE74 /* UIColor+.swift in Sources */,
+				74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */,
 				AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */,
 				AFC8ACAC2BF223C3005EAE74 /* ServiceCell.swift in Sources */,
 				AFC8AC972BF1F03E005EAE74 /* Advertisement.swift in Sources */,
