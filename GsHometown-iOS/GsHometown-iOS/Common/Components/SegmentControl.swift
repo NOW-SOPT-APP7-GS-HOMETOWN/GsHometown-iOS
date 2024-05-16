@@ -7,13 +7,15 @@
 
 import UIKit
 
-class SegmentControl: UISegmentedControl {
+final class CustomSegmentControl: UISegmentedControl {
     
     private var segmentInset: CGFloat = 8
     
     override init(items: [Any]?) {
         super.init(items: items)
         selectedSegmentIndex = 0
+        self.backgroundColor = GSColor.grey05
+        self.layer.masksToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -22,9 +24,8 @@ class SegmentControl: UISegmentedControl {
     
     override func layoutSubviews(){
         super.layoutSubviews()
-        self.backgroundColor = GSColor.grey05
+        
         self.layer.cornerRadius =  24
-        self.layer.masksToBounds = true
 
         let selectedImageViewIndex = numberOfSegments
         if let selectedImageView = subviews[selectedImageViewIndex] as? UIImageView
