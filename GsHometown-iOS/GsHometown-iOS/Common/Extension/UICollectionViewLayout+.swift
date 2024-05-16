@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 extension UICollectionViewLayout {
     static func pageSection(type: PageType) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(

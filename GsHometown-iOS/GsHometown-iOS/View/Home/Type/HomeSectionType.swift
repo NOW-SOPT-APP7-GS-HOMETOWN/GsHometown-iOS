@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 enum HomeSectionType: Int, CaseIterable {
     case advertisementSmall
     case orderServices
