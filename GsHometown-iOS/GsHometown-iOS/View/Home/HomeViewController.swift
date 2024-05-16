@@ -12,12 +12,14 @@ import SnapKit
 class HomeViewController: UIViewController {
 
     var collectionView: UICollectionView? = nil
+    var eventCurrentImage: UIImage = GSImage.mockEvent1!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GSColor.grey02
         makeCollectionView()
         setAutolayout()
+        addObservers()
     }
 
     private func setAutolayout() {
@@ -33,6 +35,10 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             return HomeSectionType(rawValue: sectionIndex)?.createSection()
         }
+        layout.register(
+            EventReusableView.self,
+            forDecorationViewOfKind: EventReusableView.identifier
+        )
         self.collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: layout
@@ -70,9 +76,33 @@ class HomeViewController: UIViewController {
             forCellWithReuseIdentifier: EventOfTheWeekCell.cellIdentifier
         )
     }
+
+    private func addObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(currentEventImageChanged),
+            name: .currentEventID,
+            object: nil
+        )
+    }
+
+    @objc
+    func currentEventImageChanged(notification: Notification) {
+        if let id = notification.userInfo?["currentEventID"] as? Int {
+            switch id {
+            case 1:
+                self.eventCurrentImage = GSImage.mockEvent1!
+            case 2:
+                self.eventCurrentImage = GSImage.mockEvent2!
+            case 3:
+                self.eventCurrentImage = GSImage.mockEvent3!
+            default:
+                self.eventCurrentImage = GSImage.mockEvent1!
+            }
+            collectionView!.reloadData()
+        }
+    }
 }
-
-
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -94,7 +124,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let section = HomeSectionType(rawValue: indexPath.section) else { return UICollectionViewCell() }
         return section.cellForItem(
             collectionView,
-            indexPath
+            indexPath,
+            currentEventImage: eventCurrentImage
         )
     }
 }
