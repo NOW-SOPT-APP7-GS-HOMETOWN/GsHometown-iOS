@@ -53,6 +53,7 @@ enum GSImage {
     static let subscribe = UIImage(named: "subscribe")
     static let thefresh = UIImage(named: "thefresh")
     static let wine = UIImage(named: "wine")
+    static let currentEventFrame = UIImage(named: "currentEventFrame")
 
     /// Chip
     static let chatbot = UIImage(named: "chatbot")
@@ -87,5 +88,7 @@ enum GSImage {
     /// Mock
     static let mockAdSmall = UIImage(named: "mockAdSmall")
     static let mockAdLarge = UIImage(named: "mockAdLarge")
-    static let mockBanner = UIImage(named: "mockBanner")
+    static let mockEvent1 = UIImage(named: "mockEvent1")
+    static let mockEvent2 = UIImage(named: "mockEvent2")
+    static let mockEvent3 = UIImage(named: "mockEvent3")
 }
