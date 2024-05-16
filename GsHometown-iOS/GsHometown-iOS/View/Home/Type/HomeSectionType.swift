@@ -7,6 +7,8 @@
 
 import UIKit
 
+import UIKit
+
 enum HomeSectionType: Int, CaseIterable {
     case advertisementSmall
     case orderServices
@@ -22,7 +24,8 @@ enum HomeSectionType: Int, CaseIterable {
 
     func cellForItem(
         _ collectionView: UICollectionView,
-        _ indexPath: IndexPath
+        _ indexPath: IndexPath,
+        currentEventImage: UIImage
     ) -> UICollectionViewCell {
         switch self {
         case .advertisementSmall:
@@ -41,7 +44,6 @@ enum HomeSectionType: Int, CaseIterable {
             ) as? OrderServiceCell else {
                 return UICollectionViewCell()
             }
-            print(indexPath)
             cell.bindData(type: indexPath.row == 0 ? .gs25 : .gsTheFresh)
             return cell
         case .convenienceServices:
@@ -69,7 +71,7 @@ enum HomeSectionType: Int, CaseIterable {
             ) as? EventCell else {
                 return UICollectionViewCell()
             }
-            cell.bindData(image: GSImage.mockBanner!)
+            cell.bindData(image: currentEventImage)
             return cell
         case .eventOfTheWeek:
             guard let cell = collectionView.dequeueReusableCell(
@@ -122,7 +124,7 @@ enum HomeSectionType: Int, CaseIterable {
         case .services:
             ServiceType.allCases.count
         case .event:
-            4
+            1
         case .eventOfTheWeek:
             1
         case .advertisementLarge:
