@@ -32,6 +32,31 @@
 		AFC8AC812BF10517005EAE74 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AFC8AC802BF10517005EAE74 /* SnapKit-Dynamic */; };
 		AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC822BF10542005EAE74 /* NetworkResult.swift */; };
 		AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC842BF1055F005EAE74 /* Config.swift */; };
+		AFC8AC8F2BF1EC47005EAE74 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC8E2BF1EC47005EAE74 /* HomeViewController.swift */; };
+		AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC922BF1EEEA005EAE74 /* PageCell.swift */; };
+		AFC8AC952BF1EFA5005EAE74 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC942BF1EFA5005EAE74 /* UICollectionViewCell+.swift */; };
+		AFC8AC972BF1F03E005EAE74 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC962BF1F03E005EAE74 /* Advertisement.swift */; };
+		AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC982BF1F4BB005EAE74 /* HomeSectionType.swift */; };
+		AFC8AC9B2BF20B99005EAE74 /* OrderServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC9A2BF20B99005EAE74 /* OrderServiceCell.swift */; };
+		AFC8AC9C2BF21352005EAE74 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC702BF103DC005EAE74 /* Pretendard-Black.otf */; };
+		AFC8AC9D2BF21354005EAE74 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC6E2BF103DC005EAE74 /* Pretendard-Bold.otf */; };
+		AFC8AC9E2BF21356005EAE74 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC6C2BF103DC005EAE74 /* Pretendard-ExtraBold.otf */; };
+		AFC8AC9F2BF21358005EAE74 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC6D2BF103DC005EAE74 /* Pretendard-ExtraLight.otf */; };
+		AFC8ACA02BF2135B005EAE74 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC6F2BF103DC005EAE74 /* Pretendard-Light.otf */; };
+		AFC8ACA12BF2135D005EAE74 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC712BF103DC005EAE74 /* Pretendard-Medium.otf */; };
+		AFC8ACA22BF2135F005EAE74 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC722BF103DC005EAE74 /* Pretendard-Regular.otf */; };
+		AFC8ACA32BF21361005EAE74 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC732BF103DC005EAE74 /* Pretendard-SemiBold.otf */; };
+		AFC8ACA42BF21363005EAE74 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC742BF103DD005EAE74 /* Pretendard-Thin.otf */; };
+		AFC8ACA82BF215BB005EAE74 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = AFC8ACA72BF215BB005EAE74 /* LookinServer */; };
+		AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACA92BF21B50005EAE74 /* ConvenienceCell.swift */; };
+		AFC8ACAC2BF223C3005EAE74 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACAB2BF223C3005EAE74 /* ServiceCell.swift */; };
+		AFC8ACAE2BF22AB8005EAE74 /* PageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACAD2BF22AB8005EAE74 /* PageType.swift */; };
+		AFC8ACB02BF22ADD005EAE74 /* UICollectionViewLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACAF2BF22ADD005EAE74 /* UICollectionViewLayout+.swift */; };
+		AFC8ACB22BF25ED3005EAE74 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACB12BF25ED3005EAE74 /* EventCell.swift */; };
+		AFC8ACB62BF2684F005EAE74 /* EventOfTheWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACB52BF2684F005EAE74 /* EventOfTheWeekCell.swift */; };
+		AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */; };
+		AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */; };
+		AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +93,21 @@
 		AFC8AC752BF104C4005EAE74 /* GsPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GsPlugin.swift; sourceTree = "<group>"; };
 		AFC8AC822BF10542005EAE74 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		AFC8AC842BF1055F005EAE74 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		AFC8AC8E2BF1EC47005EAE74 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFC8AC922BF1EEEA005EAE74 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		AFC8AC942BF1EFA5005EAE74 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		AFC8AC962BF1F03E005EAE74 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
+		AFC8AC982BF1F4BB005EAE74 /* HomeSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionType.swift; sourceTree = "<group>"; };
+		AFC8AC9A2BF20B99005EAE74 /* OrderServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceCell.swift; sourceTree = "<group>"; };
+		AFC8ACA92BF21B50005EAE74 /* ConvenienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceCell.swift; sourceTree = "<group>"; };
+		AFC8ACAB2BF223C3005EAE74 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		AFC8ACAD2BF22AB8005EAE74 /* PageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageType.swift; sourceTree = "<group>"; };
+		AFC8ACAF2BF22ADD005EAE74 /* UICollectionViewLayout+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+.swift"; sourceTree = "<group>"; };
+		AFC8ACB12BF25ED3005EAE74 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		AFC8ACB52BF2684F005EAE74 /* EventOfTheWeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheWeekCell.swift; sourceTree = "<group>"; };
+		AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceType.swift; sourceTree = "<group>"; };
+		AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC8ACA82BF215BB005EAE74 /* LookinServer in Frameworks */,
 				AFC8AC7F2BF10517005EAE74 /* SnapKit in Frameworks */,
 				AFC8AC792BF104FD005EAE74 /* Moya in Frameworks */,
 				AFC8AC7C2BF1050C005EAE74 /* Then in Frameworks */,
@@ -151,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC8AC372BF0FD28005EAE74 /* dummy7.swift */,
+				AFC8AC962BF1F03E005EAE74 /* Advertisement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				AFC8AC272BEF47C0005EAE74 /* UIColor+.swift */,
+				AFC8AC942BF1EFA5005EAE74 /* UICollectionViewCell+.swift */,
+				AFC8ACAF2BF22ADD005EAE74 /* UICollectionViewLayout+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -263,7 +307,10 @@
 		AFC8AC392BF0FD39005EAE74 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AFC8ACBE2BF26EDA005EAE74 /* Cell */,
+				AFC8ACB72BF26DF9005EAE74 /* Type */,
 				AFC8AC072BEF440B005EAE74 /* ViewController.swift */,
+				AFC8AC8E2BF1EC47005EAE74 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -308,6 +355,31 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
+		AFC8ACB72BF26DF9005EAE74 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */,
+				AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */,
+				AFC8AC982BF1F4BB005EAE74 /* HomeSectionType.swift */,
+				AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */,
+				AFC8ACAD2BF22AB8005EAE74 /* PageType.swift */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		AFC8ACBE2BF26EDA005EAE74 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFC8AC922BF1EEEA005EAE74 /* PageCell.swift */,
+				AFC8AC9A2BF20B99005EAE74 /* OrderServiceCell.swift */,
+				AFC8ACA92BF21B50005EAE74 /* ConvenienceCell.swift */,
+				AFC8ACAB2BF223C3005EAE74 /* ServiceCell.swift */,
+				AFC8ACB12BF25ED3005EAE74 /* EventCell.swift */,
+				AFC8ACB52BF2684F005EAE74 /* EventOfTheWeekCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +401,7 @@
 				AFC8AC7B2BF1050C005EAE74 /* Then */,
 				AFC8AC7E2BF10517005EAE74 /* SnapKit */,
 				AFC8AC802BF10517005EAE74 /* SnapKit-Dynamic */,
+				AFC8ACA72BF215BB005EAE74 /* LookinServer */,
 			);
 			productName = "GsHometown-iOS";
 			productReference = AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */;
@@ -362,6 +435,7 @@
 				AFC8AC772BF104FD005EAE74 /* XCRemoteSwiftPackageReference "Moya" */,
 				AFC8AC7A2BF1050C005EAE74 /* XCRemoteSwiftPackageReference "Then" */,
 				AFC8AC7D2BF10517005EAE74 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AFC8ACA62BF215BB005EAE74 /* XCRemoteSwiftPackageReference "LookinServer" */,
 			);
 			productRefGroup = AFC8AC012BEF440B005EAE74 /* Products */;
 			projectDirPath = "";
@@ -377,7 +451,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC8AC9F2BF21358005EAE74 /* Pretendard-ExtraLight.otf in Resources */,
 				AFC8AC6A2BF101A9005EAE74 /* Main.storyboard in Resources */,
+				AFC8AC9D2BF21354005EAE74 /* Pretendard-Bold.otf in Resources */,
+				AFC8ACA12BF2135D005EAE74 /* Pretendard-Medium.otf in Resources */,
+				AFC8ACA22BF2135F005EAE74 /* Pretendard-Regular.otf in Resources */,
+				AFC8AC9E2BF21356005EAE74 /* Pretendard-ExtraBold.otf in Resources */,
+				AFC8ACA02BF2135B005EAE74 /* Pretendard-Light.otf in Resources */,
+				AFC8ACA32BF21361005EAE74 /* Pretendard-SemiBold.otf in Resources */,
+				AFC8AC9C2BF21352005EAE74 /* Pretendard-Black.otf in Resources */,
+				AFC8ACA42BF21363005EAE74 /* Pretendard-Thin.otf in Resources */,
 				AFC8AC0D2BEF440E005EAE74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,21 +476,36 @@
 				AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */,
 				AFC8AC482BF0FD88005EAE74 /* dummy2.swift in Sources */,
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
+				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
 				AFC8AC262BEF46B1005EAE74 /* GSColor.swift in Sources */,
+				AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */,
 				AFC8AC342BF0FD1E005EAE74 /* dummy8.swift in Sources */,
+				AFC8ACB02BF22ADD005EAE74 /* UICollectionViewLayout+.swift in Sources */,
 				AFC8AC442BF0FD61005EAE74 /* dummy3.swift in Sources */,
 				AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */,
+				AFC8AC952BF1EFA5005EAE74 /* UICollectionViewCell+.swift in Sources */,
+				AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */,
 				AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */,
 				AFC8AC762BF104C4005EAE74 /* GsPlugin.swift in Sources */,
 				AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */,
+				AFC8ACAE2BF22AB8005EAE74 /* PageType.swift in Sources */,
 				AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */,
 				AFC8AC282BEF47C0005EAE74 /* UIColor+.swift in Sources */,
 				AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */,
+				AFC8ACAC2BF223C3005EAE74 /* ServiceCell.swift in Sources */,
+				AFC8AC972BF1F03E005EAE74 /* Advertisement.swift in Sources */,
+				AFC8AC9B2BF20B99005EAE74 /* OrderServiceCell.swift in Sources */,
+				AFC8ACB62BF2684F005EAE74 /* EventOfTheWeekCell.swift in Sources */,
+				AFC8ACB22BF25ED3005EAE74 /* EventCell.swift in Sources */,
+				AFC8AC8F2BF1EC47005EAE74 /* HomeViewController.swift in Sources */,
 				AFC8AC422BF0FD5D005EAE74 /* dummy4.swift in Sources */,
 				AFC8AC362BF0FD24005EAE74 /* dummy9.swift in Sources */,
+				AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */,
+				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
 				AFC8AC402BF0FD59005EAE74 /* dummy5.swift in Sources */,
 				AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */,
+				AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +651,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R3N359429;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "GsHometown-iOS/Info.plist";
+				INFOPLIST_FILE = "GsHometown-iOS/Common/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -582,7 +680,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R3N359429;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "GsHometown-iOS/Info.plist";
+				INFOPLIST_FILE = "GsHometown-iOS/Common/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -650,6 +748,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		AFC8ACA62BF215BB005EAE74 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -672,6 +778,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AFC8AC7D2BF10517005EAE74 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		AFC8ACA72BF215BB005EAE74 /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFC8ACA62BF215BB005EAE74 /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

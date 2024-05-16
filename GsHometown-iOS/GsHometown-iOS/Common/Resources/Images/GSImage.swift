@@ -83,4 +83,9 @@ enum GSImage {
     static let iconStar = UIImage(named: "ic_star")
     static let iconTicket = UIImage(named: "ic_ticket")
     static let iconWriting = UIImage(named: "ic_writing")
+
+    /// Mock
+    static let mockAdSmall = UIImage(named: "mockAdSmall")
+    static let mockAdLarge = UIImage(named: "mockAdLarge")
+    static let mockBanner = UIImage(named: "mockBanner")
 }
