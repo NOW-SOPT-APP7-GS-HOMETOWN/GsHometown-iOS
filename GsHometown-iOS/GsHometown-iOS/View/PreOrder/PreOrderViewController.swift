@@ -7,27 +7,52 @@
 
 import UIKit
 
+import SnapKit
+
 class PreOrderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(mainView)
-        mainView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
-        }
-        // Do any additional setup after loading the view.
+        setUI()
+        setLayout()
     }
+    
+    private lazy var scrollView : UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .red
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.isScrollEnabled = true
+        return scrollView
+    }()
+        
+    
+    private lazy var contentView = UIView()
     
     let mainView = MainView()
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUI() {
+        view.addSubview(scrollView)
+        
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(mainView)
     }
-    */
+    
+    private func setLayout() {
+        scrollView.snp.makeConstraints{
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        contentView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+            $0.height.equalTo(2000)
+        }
+        
+        mainView.snp.makeConstraints{
+            $0.top.equalToSuperview()
+            $0.height.equalTo(596)
+            $0.width.equalTo(UIScreen.main.bounds.width)
+        }
+    }
 
 }

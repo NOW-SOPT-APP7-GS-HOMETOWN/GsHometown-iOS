@@ -37,28 +37,28 @@ class MainView: UIView {
     
     private func setLayout(){
         titleLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().inset(105)
+            $0.top.equalToSuperview().inset(15)
             $0.leading.equalToSuperview().inset(17)
         }
         segmentControl.snp.makeConstraints{
             $0.height.equalTo(44)
             $0.horizontalEdges.equalToSuperview().inset(15)
-            $0.top.equalToSuperview().inset(151)
+            $0.top.equalToSuperview().inset(56)
         }
         nearStoreView.snp.makeConstraints{
             $0.height.equalTo(36)
             $0.horizontalEdges.equalToSuperview().inset(15)
-            $0.top.equalToSuperview().inset(215)
+            $0.top.equalToSuperview().inset(120)
         }
         eventView.snp.makeConstraints{
             $0.height.equalTo(151)
             $0.horizontalEdges.equalToSuperview().inset(15)
-            $0.top.equalToSuperview().inset(271)
+            $0.top.equalToSuperview().inset(176)
         }
         menuCollectionView.snp.makeConstraints{
             $0.height.equalTo(258)
             $0.horizontalEdges.equalToSuperview().inset(17.5)
-            $0.top.equalToSuperview().inset(433)
+            $0.top.equalToSuperview().inset(338)
         }
     }
     
