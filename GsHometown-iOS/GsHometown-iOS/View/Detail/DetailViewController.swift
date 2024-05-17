@@ -87,6 +87,7 @@ class DetailViewController: UIViewController {
     private let divider = UIView.grayDivider(height: 7)
     private let segmentControlView = CustomSegmentControl(items: ["상품정보", "이용안내", "유의사항"]).then{
         $0.layer.cornerRadius = 24
+        $0.backgroundColor = GSColor.grey05
     }
     private let detailImage = UIImageView().then {
         $0.image = GSImage.mockDetailInfo
