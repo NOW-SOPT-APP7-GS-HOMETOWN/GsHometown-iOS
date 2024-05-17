@@ -11,6 +11,7 @@ final class EventOfTheWeekCell: UICollectionViewCell {
 
     private let titleLabel: UILabel = UILabel()
     private let subTitleLabel: UILabel = UILabel()
+    private let arrowImageView: UIImageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +26,7 @@ final class EventOfTheWeekCell: UICollectionViewCell {
 
     private func setStyle() {
         self.backgroundColor = .white
+        self.layer.cornerRadius = 20
         titleLabel.do {
             $0.text = "GS더프레시 행사전단"
             $0.font = GSFont.h4
@@ -35,11 +37,15 @@ final class EventOfTheWeekCell: UICollectionViewCell {
             $0.font = GSFont.b3m
             $0.textColor = GSColor.grey08
         }
+        arrowImageView.do {
+            $0.image = GSImage.arrowRight
+        }
     }
 
     private func setUI() {
         self.addSubview(titleLabel)
         self.addSubview(subTitleLabel)
+        self.addSubview(arrowImageView)
     }
 
     private func setAutoLayout() {
@@ -50,6 +56,10 @@ final class EventOfTheWeekCell: UICollectionViewCell {
         subTitleLabel.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(12)
             $0.leading.equalToSuperview().inset(16)
+        }
+        arrowImageView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(16)
         }
     }
 }
