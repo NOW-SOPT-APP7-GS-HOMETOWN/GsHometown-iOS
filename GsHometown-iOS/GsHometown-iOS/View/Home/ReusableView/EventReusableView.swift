@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class EventReusableView: UICollectionReusableView {
+final class EventReusableView: UICollectionReusableView {
 
     private let titleLabel: UILabel = UILabel()
     private let subTitleLabel: UILabel = UILabel()

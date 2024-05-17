@@ -12,6 +12,7 @@
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
+		AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
@@ -70,6 +71,7 @@
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
+		AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSNavigationBar.swift; sourceTree = "<group>"; };
 		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4889162BF61AD5007F9C11 /* EventReusableView.swift */,
+				AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				74C596612BF67D8500E96991 /* SegmentControl.swift */,
+				AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,7 +337,6 @@
 				AFC8ACB72BF26DF9005EAE74 /* Type */,
 				AFC8AC072BEF440B005EAE74 /* ViewController.swift */,
 				AFC8AC8E2BF1EC47005EAE74 /* HomeViewController.swift */,
-				AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */,
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
+				AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
 				AFC8AC262BEF46B1005EAE74 /* GSColor.swift in Sources */,
 				AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */,
