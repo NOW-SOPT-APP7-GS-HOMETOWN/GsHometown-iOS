@@ -11,11 +11,15 @@ class PreOrderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addSubview(mainView)
+        mainView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
         // Do any additional setup after loading the view.
     }
     
-
+    let mainView = MainView()
+    
     /*
     // MARK: - Navigation
 
