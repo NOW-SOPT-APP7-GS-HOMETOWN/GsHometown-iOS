@@ -8,7 +8,7 @@
 import UIKit
 
 class EventView: UIView {
-    private let eventHeaderView = HeaderReusableView(title: "[GS Pay 추가 할인] GS25 정육상품 4...", date: "2024.04.05 ~ 2024.04.27")
+    private let discountEventHeaderView = HeaderReusableView(title: "[GS Pay 추가 할인] GS25 정육상품 4...", date: "2024.04.05 ~ 2024.04.27")
     
     private var discountEventCollectionView : UICollectionView
     private var discountEventCollectionViewDataSource = DiscountEventCollectionView()
@@ -29,13 +29,13 @@ class EventView: UIView {
     
     private func setUI(){
         self.backgroundColor = GSColor.grey00
-        self.addSubview(eventHeaderView)
+        self.addSubview(discountEventHeaderView)
         self.addSubview(discountEventCollectionView)
         self.addSubview(grayDivider)
     }
     
     private func setLayout(){
-        eventHeaderView.snp.makeConstraints{
+        discountEventHeaderView.snp.makeConstraints{
             $0.top.equalToSuperview().inset(21)
             $0.horizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(48)

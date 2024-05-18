@@ -30,6 +30,7 @@ class PreOrderViewController: UIViewController {
     
     let mainView = MainView()
     let eventView = EventView()
+    let specialProductView = SpecialProductView()
     
     private func setUI() {
         view.addSubview(scrollView)
@@ -39,8 +40,10 @@ class PreOrderViewController: UIViewController {
         
         mainView.isUserInteractionEnabled = true
         eventView.isUserInteractionEnabled = true
+        
         contentView.addSubview(mainView)
         contentView.addSubview(eventView)
+        contentView.addSubview(specialProductView)
         
     }
     
@@ -62,7 +65,12 @@ class PreOrderViewController: UIViewController {
         }
         eventView.snp.makeConstraints{
             $0.top.equalTo(mainView.snp.bottom)
-            $0.height.equalTo(351)
+            $0.height.equalTo(358)
+            $0.width.equalTo(UIScreen.main.bounds.width)
+        }
+        specialProductView.snp.makeConstraints{
+            $0.top.equalTo(eventView.snp.bottom)
+            $0.height.equalTo(302)
             $0.width.equalTo(UIScreen.main.bounds.width)
         }
     }
