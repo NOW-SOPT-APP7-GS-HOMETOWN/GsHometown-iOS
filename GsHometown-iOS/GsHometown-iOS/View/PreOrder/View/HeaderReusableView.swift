@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventHeaderView: UIView {
+class HeaderReusableView: UIView {
 
     init(title : String, date : String) {
         super.init(frame: .zero)

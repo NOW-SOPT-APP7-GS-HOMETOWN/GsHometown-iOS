@@ -8,7 +8,7 @@
 import UIKit
 
 class EventView: UIView {
-    private let eventHeaderView = EventHeaderView(title: "[GS Pay 추가 할인] GS25 정육상품 4...", date: "2024.04.05 ~ 2024.04.27")
+    private let eventHeaderView = HeaderReusableView(title: "[GS Pay 추가 할인] GS25 정육상품 4...", date: "2024.04.05 ~ 2024.04.27")
     
     private var discountEventCollectionView : UICollectionView
     private var discountEventCollectionViewDataSource = DiscountEventCollectionView()

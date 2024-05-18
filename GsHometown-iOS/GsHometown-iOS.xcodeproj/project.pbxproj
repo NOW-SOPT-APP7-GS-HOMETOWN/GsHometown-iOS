@@ -20,7 +20,7 @@
 		74C596842BF7277500E96991 /* DiscountEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596832BF7277500E96991 /* DiscountEvent.swift */; };
 		74C596862BF73F5F00E96991 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596852BF73F5F00E96991 /* EventView.swift */; };
 		74C596882BF7E23700E96991 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596872BF7E23700E96991 /* UILabel+.swift */; };
-		74C5968A2BF7E6A900E96991 /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596892BF7E6A800E96991 /* EventHeaderView.swift */; };
+		74C5968A2BF7E6A900E96991 /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596892BF7E6A800E96991 /* HeaderReusableView.swift */; };
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
@@ -89,7 +89,7 @@
 		74C596832BF7277500E96991 /* DiscountEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountEvent.swift; sourceTree = "<group>"; };
 		74C596852BF73F5F00E96991 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		74C596872BF7E23700E96991 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
-		74C596892BF7E6A800E96991 /* EventHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
+		74C596892BF7E6A800E96991 /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
@@ -161,12 +161,9 @@
 		74C5966E2BF6905000E96991 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74C5966F2BF6F4D600E96991 /* MainView.swift */,
-				74C5967D2BF7075F00E96991 /* MenuCollectionView.swift */,
-				74C596892BF7E6A800E96991 /* EventHeaderView.swift */,
-				74C596852BF73F5F00E96991 /* EventView.swift */,
-				74C5967F2BF7206B00E96991 /* DiscountEventCollectionView.swift */,
-				74C596712BF6F73100E96991 /* NearStoreView.swift */,
+				74C596892BF7E6A800E96991 /* HeaderReusableView.swift */,
+				74C5968B2BF884AF00E96991 /* MainView */,
+				74C5968C2BF884D000E96991 /* EventView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +183,25 @@
 				74C596812BF7209700E96991 /* DiscountEventCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		74C5968B2BF884AF00E96991 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				74C5967D2BF7075F00E96991 /* MenuCollectionView.swift */,
+				74C5966F2BF6F4D600E96991 /* MainView.swift */,
+				74C596712BF6F73100E96991 /* NearStoreView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		74C5968C2BF884D000E96991 /* EventView */ = {
+			isa = PBXGroup;
+			children = (
+				74C5967F2BF7206B00E96991 /* DiscountEventCollectionView.swift */,
+				74C596852BF73F5F00E96991 /* EventView.swift */,
+			);
+			path = EventView;
 			sourceTree = "<group>";
 		};
 		AF4889152BF61ACA007F9C11 /* ReusableView */ = {
@@ -572,7 +588,7 @@
 				AFC8AC952BF1EFA5005EAE74 /* UICollectionViewCell+.swift in Sources */,
 				AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */,
 				74C596842BF7277500E96991 /* DiscountEvent.swift in Sources */,
-				74C5968A2BF7E6A900E96991 /* EventHeaderView.swift in Sources */,
+				74C5968A2BF7E6A900E96991 /* HeaderReusableView.swift in Sources */,
 				AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */,
 				74C5966D2BF68FF200E96991 /* PreOrderViewController.swift in Sources */,
 				74C596792BF7026600E96991 /* MenuType.swift in Sources */,
