@@ -31,6 +31,7 @@ enum GSColor {
 
     static let pink01 = UIColor(hexCode: "FEE7ED")
     static let pink02 = UIColor(hexCode: "FFBCB9")
+    static let heart_fill = UIColor(hexCode: "F70DA7")
 
     static let lightgreen01 = UIColor(hexCode: "D3F9A4")
     static let red01 = UIColor(hexCode: "F5484F")
