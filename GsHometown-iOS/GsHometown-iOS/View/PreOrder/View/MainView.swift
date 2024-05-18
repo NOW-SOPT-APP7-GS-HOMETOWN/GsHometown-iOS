@@ -33,6 +33,7 @@ class MainView: UIView {
         self.addSubview(nearStoreView)
         self.addSubview(eventView)
         self.addSubview(menuCollectionView)
+        self.addSubview(grayDivider)
     }
     
     private func setLayout(){
@@ -60,6 +61,10 @@ class MainView: UIView {
             $0.horizontalEdges.equalToSuperview().inset(17.5)
             $0.top.equalToSuperview().inset(338)
         }
+        grayDivider.snp.makeConstraints{
+            $0.top.equalTo(menuCollectionView.snp.bottom).offset(5)
+            $0.horizontalEdges.equalToSuperview()
+        }
     }
     
     private let titleLabel : UILabel = {
@@ -84,6 +89,7 @@ class MainView: UIView {
         menuCollectionView.delegate = menuCollectionViewDataSource
     }
     
+    private var grayDivider = grayDivider(height: 7)
     
 
 }

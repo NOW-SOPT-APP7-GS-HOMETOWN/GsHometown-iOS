@@ -21,6 +21,5 @@ extension DiscountEvent {
         DiscountEvent(productImg: GSImage.mockDiscountProduct, productName: "예약)한돈구이용삼겹살(400G)", cardDiscountPrice: "8900원", price: "9900원", originalPrice: "12900원"),
         DiscountEvent(productImg: GSImage.mockDiscountProduct, productName: "예약)한돈구이용삼겹살(400G)", cardDiscountPrice: "8900원", price: "9900원", originalPrice: "12900원"),
         DiscountEvent(productImg: GSImage.mockDiscountProduct, productName: "예약)한돈구이용삼겹살(400G)", cardDiscountPrice: "8900원", price: "9900원", originalPrice: "12900원")
-        
     ]
 }

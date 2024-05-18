@@ -12,7 +12,6 @@ import SnapKit
 final class DiscountEventCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "DiscountEventCollectionViewCell"
-    var discountEventData = DiscountEvent.mockData
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,7 +47,6 @@ final class DiscountEventCollectionViewCell: UICollectionViewCell {
             $0.top.equalToSuperview().inset(150)
             $0.leading.equalToSuperview().inset(1)
             $0.width.equalTo(103)
-            $0.height.equalTo(28)
         }
         cardDiscountLabel.snp.makeConstraints{
             $0.top.equalTo(productNameLabel.snp.top).inset(34)
@@ -67,7 +65,7 @@ final class DiscountEventCollectionViewCell: UICollectionViewCell {
             $0.height.equalTo(20)
         }
         originalPriceLabel.snp.makeConstraints{
-            $0.top.equalTo(cardDiscountPriceLabel.snp.bottom).inset(4)
+            $0.top.equalTo(priceLabel.snp.top).inset(4)
             $0.leading.equalTo(priceLabel.snp.trailing).offset(2)
             $0.height.equalTo(12)
         }
@@ -82,9 +80,9 @@ final class DiscountEventCollectionViewCell: UICollectionViewCell {
     func bindData(_ discountEventData : DiscountEvent) {
         productImageView.image = discountEventData.productImg
         productNameLabel.text = discountEventData.productName
-        cardDiscountLabel.text = discountEventData.cardDiscountPrice
+        cardDiscountPriceLabel.text = discountEventData.cardDiscountPrice
         priceLabel.text = discountEventData.price
-        originalPriceLabel.text = discountEventData.originalPrice
+        originalPriceLabel.strikethrough(from: discountEventData.originalPrice, at: discountEventData.originalPrice)
     }
     
     private lazy var productImageView : UIImageView  = {
@@ -95,13 +93,13 @@ final class DiscountEventCollectionViewCell: UICollectionViewCell {
     
     private let pickupImageView : UIImageView  = {
         let imageView = UIImageView()
-        imageView.image = GSImage.pickUpBlue
+        imageView.image = GSImage.zonePickUpSmall
         return imageView
     }()
     
     private let shoppingCartImageView : UIImageView  = {
         let imageView = UIImageView()
-        imageView.image = GSImage.iconSb1
+        imageView.image = GSImage.iconSb
         return imageView
     }()
     
@@ -109,6 +107,8 @@ final class DiscountEventCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = GSColor.grey09
         label.font = GSFont.b4m
+        label.numberOfLines = 0
+        label.lineBreakMode = .byCharWrapping
         return label
     }()
     
