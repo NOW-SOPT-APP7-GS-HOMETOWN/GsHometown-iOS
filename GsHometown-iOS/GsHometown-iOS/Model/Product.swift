@@ -19,10 +19,10 @@ extension Product {
     ]
     
     static let sideDishProductMockData : [Product] = [
-        Product(productImg: GSImage.mockConvenientProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원"),
-        Product(productImg: GSImage.mockConvenientProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원"),
-        Product(productImg: GSImage.mockConvenientProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원"),
-        Product(productImg: GSImage.mockConvenientProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원")
+        Product(productImg: GSImage.mockSideDishProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원"),
+        Product(productImg: GSImage.mockSideDishProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원"),
+        Product(productImg: GSImage.mockSideDishProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원"),
+        Product(productImg: GSImage.mockSideDishProduct, productName: "NEW이거닭강정(오리지널)", price: "5,200원")
     ]
     
     static let convenientProductMockData : [Product] = [

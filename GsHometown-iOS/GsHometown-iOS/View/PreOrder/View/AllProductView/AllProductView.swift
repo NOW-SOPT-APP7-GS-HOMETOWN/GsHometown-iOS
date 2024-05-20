@@ -29,6 +29,7 @@ class AllProductView: UIView {
         self.backgroundColor = GSColor.grey00
         self.addSubview(allProductCollectionView)
         self.addSubview(grayDivider)
+        allProductCollectionView.isScrollEnabled = false
     }
     
     private func setLayout(){
@@ -38,7 +39,7 @@ class AllProductView: UIView {
             $0.leading.trailing.equalToSuperview().inset(15)
         }
         grayDivider.snp.makeConstraints{
-            $0.top.equalTo(allProductCollectionView.snp.bottom).offset(6.5)
+            $0.top.equalToSuperview().offset(745)
             $0.horizontalEdges.equalToSuperview()
         }
     }

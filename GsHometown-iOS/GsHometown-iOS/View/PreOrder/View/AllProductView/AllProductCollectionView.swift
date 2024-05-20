@@ -52,7 +52,7 @@ class AllProductCollectionView: UIView, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 24, left: 0, bottom: 104, right: 0)
+        return UIEdgeInsets(top: 24, left: 0, bottom: 131, right: 0)
     }
     
     

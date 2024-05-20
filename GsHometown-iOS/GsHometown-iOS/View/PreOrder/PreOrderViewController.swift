@@ -19,7 +19,6 @@ class PreOrderViewController: UIViewController {
     
     private lazy var scrollView : UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = .red
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.isScrollEnabled = true
         return scrollView
@@ -57,7 +56,7 @@ class PreOrderViewController: UIViewController {
         contentView.snp.makeConstraints{
             $0.edges.equalTo(scrollView)
             $0.width.equalTo(scrollView) // 이거 있어야 subview 클릭 가능
-            $0.height.equalTo(3000)
+            $0.height.equalTo(2951)
         }
         
         mainView.snp.makeConstraints{
