@@ -75,6 +75,7 @@ enum GSImage {
     static let iconCoupon = UIImage(named: "ic_coupon")
     static let iconGift = UIImage(named: "ic_gift")
     static let iconLove = UIImage(named: "ic_love")
+    static let iconLoveFill = UIImage(named: "ic_love_fill")
     static let iconPlus = UIImage(named: "ic_plus")
     static let iconRecent = UIImage(named: "ic_recent")
     static let iconSb = UIImage(named: "ic_sb")

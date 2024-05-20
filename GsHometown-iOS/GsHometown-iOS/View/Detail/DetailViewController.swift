@@ -11,6 +11,16 @@ import SnapKit
 import Then
 
 class DetailViewController: UIViewController {
+    
+    private var isTouched = false {
+        didSet {
+            if isTouched {
+                heartButton.setImage(GSImage.iconLoveFill, for: .normal)
+            } else {
+                heartButton.setImage(GSImage.iconLove, for: .normal)
+            }
+        }
+    }
 
     private let scrollView = UIScrollView()
     private let contentView = UIView()
@@ -36,6 +46,7 @@ class DetailViewController: UIViewController {
     }
     private lazy var heartButton = UIButton().then{
         $0.setImage(GSImage.iconLove, for: .normal)
+        $0.addTarget(self, action: #selector(heartButtonTapped), for: .touchUpInside)
     }
     private lazy var shareButton = UIButton().then{
         $0.setImage(GSImage.iconShare, for: .normal)
@@ -99,6 +110,10 @@ class DetailViewController: UIViewController {
         self.view.backgroundColor = .white
         setUI()
         setAutolayout()
+    }
+    
+    @objc func heartButtonTapped() {
+        isTouched.toggle()
     }
     
     private func setUI() {
