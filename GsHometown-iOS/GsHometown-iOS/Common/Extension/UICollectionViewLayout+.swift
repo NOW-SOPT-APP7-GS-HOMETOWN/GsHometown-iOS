@@ -159,6 +159,7 @@ extension UICollectionViewLayout {
         let backgroundItem = NSCollectionLayoutDecorationItem.background(elementKind: ServiceReusableView.identifier)
         section.decorationItems = [backgroundItem]
         section.contentInsets.top = 52
+        section.contentInsets.bottom = 8
 
         return section
     }
@@ -171,7 +172,6 @@ extension UICollectionViewLayout {
         )
         let largeItem = NSCollectionLayoutItem(layoutSize: largeSize)
 
-        let groupHeight: CGFloat = 270
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.65),
             heightDimension: .fractionalHeight(0.3)
@@ -185,12 +185,13 @@ extension UICollectionViewLayout {
 
         section.orthogonalScrollingBehavior = .none
         section.contentInsets = .init(
-            top: 71,
+            top: 91,
             leading: 16,
             bottom: 14,
             trailing: 0
         )
         let backgroundItem = NSCollectionLayoutDecorationItem.background(elementKind: EventReusableView.identifier)
+        backgroundItem.contentInsets.top = 20
         section.decorationItems = [backgroundItem]
 
         return section
