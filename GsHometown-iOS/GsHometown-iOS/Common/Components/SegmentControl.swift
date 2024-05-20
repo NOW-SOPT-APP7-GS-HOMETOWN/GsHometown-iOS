@@ -26,6 +26,7 @@ final class CustomSegmentControl: UISegmentedControl {
         super.layoutSubviews()
         
         self.layer.cornerRadius =  24
+        self.backgroundColor = GSColor.grey05
 
         let selectedImageViewIndex = numberOfSegments
         if let selectedImageView = subviews[selectedImageViewIndex] as? UIImageView

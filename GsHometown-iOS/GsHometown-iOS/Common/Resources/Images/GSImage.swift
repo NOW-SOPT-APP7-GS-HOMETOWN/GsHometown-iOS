@@ -75,6 +75,7 @@ enum GSImage {
     static let iconCoupon = UIImage(named: "ic_coupon")
     static let iconGift = UIImage(named: "ic_gift")
     static let iconLove = UIImage(named: "ic_love")
+    static let iconLoveFill = UIImage(named: "ic_love_fill")
     static let iconPlus = UIImage(named: "ic_plus")
     static let iconRecent = UIImage(named: "ic_recent")
     static let iconSb = UIImage(named: "ic_sb")
@@ -85,6 +86,7 @@ enum GSImage {
     static let iconTicket = UIImage(named: "ic_ticket")
     static let iconWriting = UIImage(named: "ic_writing")
     static let iconRobot = UIImage(named: "ic_robot")
+    static let iconFiveStar = UIImage(named: "ic_fiveStar")
 
     /// Mock
     static let mockAdSmall = UIImage(named: "mockAdSmall")
@@ -96,4 +98,7 @@ enum GSImage {
     static let mockSpecialProduct = UIImage(named: "mockSpecialProduct")
     static let mockSideDishProduct = UIImage(named: "mockSideDishProduct")
     static let mockConvenientProduct = UIImage(named: "mockConvenientProduct")
+    static let mockDetailMain = UIImage(named: "mockDetailMain")
+    static let mockDetailInfo = UIImage(named: "mockDetailInfo")
+
 }
