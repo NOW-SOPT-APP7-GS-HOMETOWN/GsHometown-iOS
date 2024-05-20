@@ -11,8 +11,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
 
-    private var collectionView: UICollectionView? = nil
-    private var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    var collectionView: UICollectionView? = nil
+    var eventCurrentImage: UIImage = GSImage.mockEvent1!
     private let gsNavigationBar = GSNavigationBar()
 
     override func viewDidLoad() {
