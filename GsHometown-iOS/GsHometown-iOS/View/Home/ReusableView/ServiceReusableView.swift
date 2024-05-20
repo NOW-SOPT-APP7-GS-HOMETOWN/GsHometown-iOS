@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ServiceReusableView: UICollectionReusableView {
+final class ServiceReusableView: UICollectionReusableView {
 
     private let titleLabel: UILabel = UILabel()
 
