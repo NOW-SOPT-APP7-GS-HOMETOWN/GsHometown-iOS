@@ -108,8 +108,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        
         setUI()
         setAutolayout()
+        setNavigation()
     }
     
     @objc func heartButtonTapped() {
@@ -198,5 +200,9 @@ class DetailViewController: UIViewController {
             $0.bottom.horizontalEdges.equalToSuperview()
             $0.height.equalTo(94)
         }
+    }
+    
+    private func setNavigation() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }
