@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
 
     private var collectionView: UICollectionView? = nil
     private var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    var autoScrollTimer: Timer?
+    private var currentAdvertisementIndex: Int = 0
     private let gsNavigationBar = GSNavigationBar()
 
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class HomeViewController: UIViewController {
         setStyle()
         setUI()
         setAutolayout()
+        startTimer()
         addObservers()
     }
 
@@ -99,6 +102,13 @@ class HomeViewController: UIViewController {
         )
     }
 
+    private func startTimer() {
+        autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            self.scrollToNextItem()
+        }
+    }
+    
     private func addObservers() {
         NotificationCenter.default.addObserver(
             self,
@@ -122,6 +132,22 @@ class HomeViewController: UIViewController {
                 self.eventCurrentImage = GSImage.mockEvent1!
             }
             collectionView!.reloadData()
+        }
+    }
+
+    func scrollToNextItem() {
+        self.currentAdvertisementIndex += 1
+        if currentAdvertisementIndex < Advertisement.mockDataForSmall.count {
+            let smallIndexPath = IndexPath(item: currentAdvertisementIndex, section: 0)
+            let largeIndexPath = IndexPath(item: currentAdvertisementIndex, section: 6)
+            collectionView?.scrollToItem(at: smallIndexPath, at: .centeredHorizontally, animated: true)
+            collectionView?.scrollToItem(at: largeIndexPath, at: .centeredHorizontally, animated: true)
+        } else {
+            currentAdvertisementIndex = 0
+            let smallIndexPath = IndexPath(item: currentAdvertisementIndex, section: 0)
+            let largeIndexPath = IndexPath(item: currentAdvertisementIndex, section: 6)
+            collectionView?.scrollToItem(at: smallIndexPath, at: .centeredHorizontally, animated: true)
+            collectionView?.scrollToItem(at: largeIndexPath, at: .centeredHorizontally, animated: true)
         }
     }
 }
