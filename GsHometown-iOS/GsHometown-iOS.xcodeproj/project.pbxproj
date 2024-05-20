@@ -12,6 +12,9 @@
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
+		AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */; };
+		AF99AFE92BF75CEA004CC4D1 /* GSTabBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */; };
+		AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
@@ -70,6 +73,9 @@
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
+		AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarController.swift; sourceTree = "<group>"; };
+		AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarType.swift; sourceTree = "<group>"; };
+		AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+.swift"; sourceTree = "<group>"; };
 		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +148,23 @@
 				AF4889162BF61AD5007F9C11 /* EventReusableView.swift */,
 			);
 			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		AF99AFE32BF75A09004CC4D1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */,
+				AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AF99AFEA2BF76ED8004CC4D1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		AFC8ABF72BEF440B005EAE74 = {
@@ -219,6 +242,7 @@
 		AFC8AC1B2BEF4458005EAE74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF99AFE32BF75A09004CC4D1 /* TabBar */,
 				AFC8AC3C2BF0FD4D005EAE74 /* MyInfo */,
 				AFC8AC3B2BF0FD48005EAE74 /* Detail */,
 				AFC8AC3A2BF0FD40005EAE74 /* PreOrder */,
@@ -230,6 +254,7 @@
 		AFC8AC1C2BEF445C005EAE74 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AF99AFEA2BF76ED8004CC4D1 /* Home */,
 				AFC8AC452BF0FD67005EAE74 /* dummy1.swift */,
 			);
 			path = Controller;
@@ -500,6 +525,7 @@
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
+				AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */,
 				AFC8AC262BEF46B1005EAE74 /* GSColor.swift in Sources */,
 				AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */,
 				AFC8AC342BF0FD1E005EAE74 /* dummy8.swift in Sources */,
@@ -527,12 +553,14 @@
 				AFC8ACB62BF2684F005EAE74 /* EventOfTheWeekCell.swift in Sources */,
 				AFC8ACB22BF25ED3005EAE74 /* EventCell.swift in Sources */,
 				AFC8AC8F2BF1EC47005EAE74 /* HomeViewController.swift in Sources */,
+				AF99AFE92BF75CEA004CC4D1 /* GSTabBarType.swift in Sources */,
 				AFC8AC422BF0FD5D005EAE74 /* dummy4.swift in Sources */,
 				AFC8AC362BF0FD24005EAE74 /* dummy9.swift in Sources */,
 				AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */,
 				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
 				AFC8AC402BF0FD59005EAE74 /* dummy5.swift in Sources */,
 				AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */,
+				AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */,
 				AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
