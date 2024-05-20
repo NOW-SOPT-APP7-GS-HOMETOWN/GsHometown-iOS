@@ -22,6 +22,14 @@ class HomeViewController: UIViewController {
         addObservers()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        startTimer()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimer()
+    }
+
     private func setAutolayout() {
         collectionView!.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview().inset(15)
@@ -81,32 +89,6 @@ class HomeViewController: UIViewController {
             EventOfTheWeekCell.self,
             forCellWithReuseIdentifier: EventOfTheWeekCell.cellIdentifier
         )
-    }
-
-    private func addObservers() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(currentEventImageChanged),
-            name: .currentEventID,
-            object: nil
-        )
-    }
-
-    @objc
-    func currentEventImageChanged(notification: Notification) {
-        if let id = notification.userInfo?["currentEventID"] as? Int {
-            switch id {
-            case 1:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            case 2:
-                self.eventCurrentImage = GSImage.mockEvent2!
-            case 3:
-                self.eventCurrentImage = GSImage.mockEvent3!
-            default:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            }
-            collectionView!.reloadData()
-        }
     }
 }
 
