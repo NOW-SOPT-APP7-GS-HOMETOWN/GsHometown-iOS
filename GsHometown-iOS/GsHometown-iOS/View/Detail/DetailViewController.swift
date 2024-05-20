@@ -92,6 +92,7 @@ class DetailViewController: UIViewController {
     private let detailImage = UIImageView().then {
         $0.image = GSImage.mockDetailInfo
     }
+    private let tabBar = DetailTabBarView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +103,7 @@ class DetailViewController: UIViewController {
     
     private func setUI() {
         self.view.addSubview(scrollView)
+        self.view.addSubview(tabBar)
         scrollView.addSubview(contentView)
         [mainImage, infoStackView, buttonStackView, receiptInfoLabel, receiptStackView,
          reviewStackView, divider, segmentControlView, detailImage].forEach {
@@ -176,6 +178,10 @@ class DetailViewController: UIViewController {
             $0.top.equalTo(segmentControlView.snp.bottom).offset(27)
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(2600)
+        }
+        tabBar.snp.makeConstraints{
+            $0.bottom.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(94)
         }
     }
 }
