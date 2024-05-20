@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension DTO {
+    struct PostLikeRequest: Codable {
+        let memberId: Int
+        let productId: Int
+    }
+}

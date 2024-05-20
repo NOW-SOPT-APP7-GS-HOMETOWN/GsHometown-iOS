@@ -6,3 +6,25 @@
 //
 
 import Foundation
+
+extension DTO {
+    struct GetHomeResponse: Codable {
+        let status: Int
+        let data: HomeImage
+    }
+}
+
+extension DTO.GetHomeResponse {
+    struct HomeImage: Codable {
+        let topBanner: [String]
+        let monthlyEvents: [Banner]
+        let bottomBanners: [String]
+    }
+}
+
+extension DTO.GetHomeResponse.HomeImage {
+    struct Banner: Codable {
+        let mainBanners: String
+        let subBanners: String
+    }
+}

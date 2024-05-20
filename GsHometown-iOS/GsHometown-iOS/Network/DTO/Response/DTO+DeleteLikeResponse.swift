@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+extension DTO {
+    struct DeleteLikeResponse: Codable {
+        let status: Int
+        let data: Like
+    }
+}
+
+extension DTO.DeleteLikeResponse {
+    struct Like: Codable {
+        let isLiked: Bool
+    }
+}

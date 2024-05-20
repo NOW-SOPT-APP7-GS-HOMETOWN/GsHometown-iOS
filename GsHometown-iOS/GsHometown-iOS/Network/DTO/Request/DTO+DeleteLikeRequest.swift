@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension DTO {
+    struct DeleteLikeRequest: Codable {
+        let memberId: Int
+        let productId: Int
+    }
+}

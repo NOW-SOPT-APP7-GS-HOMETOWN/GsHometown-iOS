@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension DTO {
+    struct GetPreorderInfoRequest: Codable {
+        let type: String
+    }
+}

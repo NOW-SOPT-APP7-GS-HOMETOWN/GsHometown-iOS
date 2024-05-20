@@ -6,3 +6,6 @@
 //
 
 import Foundation
+
+// Namespace
+enum DTO { }
