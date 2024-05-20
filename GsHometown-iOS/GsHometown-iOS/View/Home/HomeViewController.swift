@@ -11,15 +11,26 @@ import SnapKit
 
 class HomeViewController: UIViewController {
 
-    var collectionView: UICollectionView? = nil
-    var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    private var collectionView: UICollectionView? = nil
+    private var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    private let gsNavigationBar = GSNavigationBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = GSColor.grey02
         makeCollectionView()
+        setStyle()
+        setUI()
         setAutolayout()
         addObservers()
+    }
+
+    private func setStyle() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.view.backgroundColor = GSColor.grey02
+    }
+
+    private func setUI() {
+        self.view.addSubview(gsNavigationBar)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -31,9 +42,14 @@ class HomeViewController: UIViewController {
     }
 
     private func setAutolayout() {
+        gsNavigationBar.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.horizontalEdges.equalToSuperview()
+        }
         collectionView!.snp.makeConstraints {
+            $0.top.equalTo(gsNavigationBar.snp.bottom).offset(3)
             $0.horizontalEdges.equalToSuperview().inset(15)
-            $0.verticalEdges.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
 

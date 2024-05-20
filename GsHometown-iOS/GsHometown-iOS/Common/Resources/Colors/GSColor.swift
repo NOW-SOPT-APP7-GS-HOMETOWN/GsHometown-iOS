@@ -31,6 +31,7 @@ enum GSColor {
 
     static let pink01 = UIColor(hexCode: "FEE7ED")
     static let pink02 = UIColor(hexCode: "FFBCB9")
+    static let heart_fill = UIColor(hexCode: "F70DA7")
 
     static let lightgreen01 = UIColor(hexCode: "D3F9A4")
     static let red01 = UIColor(hexCode: "F5484F")
@@ -41,8 +42,8 @@ enum GSColor {
     static let grey01 = UIColor(hexCode: "FAFBFD")
     static let grey02 = UIColor(hexCode: "F4F5FB")
     static let grey03 = UIColor(hexCode: "F2F3F7")
-    static let grey04 = UIColor(hexCode: "E5E8F0")
-    static let grey05 = UIColor(hexCode: "E7E7E7")
+    static let grey04 = UIColor(hexCode: "E7E7E7")
+    static let grey05 = UIColor(hexCode: "E5E8F0")
     static let grey06 = UIColor(hexCode: "C0C2C6")
     static let grey07 = UIColor(hexCode: "939AAA")
     static let grey08 = UIColor(hexCode: "838A93")
