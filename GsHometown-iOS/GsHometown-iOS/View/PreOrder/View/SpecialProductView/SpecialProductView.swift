@@ -8,7 +8,7 @@
 import UIKit
 
 class SpecialProductView: UIView {
-    private let specialProductHeaderView = HeaderReusableView(title: "푸냥이 푸딩젤리 2탄! 복숭아맛🍑", date: "2024.04.23 ~ 2024.04.25")
+    private let specialProductHeaderView = HeaderReusableView()
     
     private var specialProductCollectionView : UICollectionView
     private var specialProductCollectionViewDataSource = SpecialProductCollectionView()
@@ -21,6 +21,7 @@ class SpecialProductView: UIView {
         setLayout()
         setDiscountEventCollectionView()
         specialProductCollectionView.reloadData()
+        specialProductHeaderView.configure(with: "푸냥이 푸딩젤리 2탄! 복숭아맛🍑", date: "2024.04.23 ~ 2024.04.25")
     }
 
     required init?(coder: NSCoder) {

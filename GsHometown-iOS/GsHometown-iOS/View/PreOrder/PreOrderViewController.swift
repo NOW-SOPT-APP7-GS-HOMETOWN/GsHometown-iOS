@@ -31,6 +31,7 @@ class PreOrderViewController: UIViewController {
     let mainView = MainView()
     let eventView = EventView()
     let specialProductView = SpecialProductView()
+    let allProductView = AllProductView()
     
     private func setUI() {
         view.addSubview(scrollView)
@@ -44,6 +45,7 @@ class PreOrderViewController: UIViewController {
         contentView.addSubview(mainView)
         contentView.addSubview(eventView)
         contentView.addSubview(specialProductView)
+        contentView.addSubview(allProductView)
         
     }
     
@@ -55,7 +57,7 @@ class PreOrderViewController: UIViewController {
         contentView.snp.makeConstraints{
             $0.edges.equalTo(scrollView)
             $0.width.equalTo(scrollView) // 이거 있어야 subview 클릭 가능
-            $0.height.equalTo(2000)
+            $0.height.equalTo(3000)
         }
         
         mainView.snp.makeConstraints{
@@ -73,6 +75,13 @@ class PreOrderViewController: UIViewController {
             $0.height.equalTo(302)
             $0.width.equalTo(UIScreen.main.bounds.width)
         }
+        allProductView.snp.makeConstraints{
+            $0.top.equalTo(specialProductView.snp.bottom)
+            $0.height.equalTo(1500.5)
+            $0.width.equalTo(UIScreen.main.bounds.width)
+            $0.bottom.equalToSuperview()
+        }
     }
 
 }
+

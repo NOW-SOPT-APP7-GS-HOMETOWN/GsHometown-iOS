@@ -93,4 +93,6 @@ enum GSImage {
     static let mockEvent3 = UIImage(named: "mockEvent3")
     static let mockDiscountProduct = UIImage(named: "mockDiscountProduct")
     static let mockSpecialProduct = UIImage(named: "mockSpecialProduct")
+    static let mockSideDishProduct = UIImage(named: "mockSideDishProduct")
+    static let mockConvenientProduct = UIImage(named: "mockConvenientProduct")
 }

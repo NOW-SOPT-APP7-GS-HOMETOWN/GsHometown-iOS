@@ -1,5 +1,5 @@
 //
-//  SpecialProductCollectionViewCell.swift
+//  AllProductCollectionViewCell.swift
 //  GsHometown-iOS
 //
 //  Created by 이수민 on 5/18/24.
@@ -9,9 +9,9 @@ import UIKit
 
 import SnapKit
 
-final class SpecialProductCollectionViewCell: UICollectionViewCell {
+final class AllProductCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "SpecialProductCollectionViewCell"
+    static let identifier = "AllProductCollectionViewCell"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,27 +32,28 @@ final class SpecialProductCollectionViewCell: UICollectionViewCell {
     func setLayout() {
         productImageView.snp.makeConstraints{
             $0.top.leading.trailing.equalToSuperview()
-            $0.height.equalTo(111)
-            $0.width.equalTo(110)
+            $0.height.width.equalTo(165)
         }
         pickupImageView.snp.makeConstraints{
-            $0.top.equalToSuperview().inset(118)
+            $0.top.equalToSuperview().inset(173)
             $0.leading.equalToSuperview()
+            $0.width.equalTo(52)
+            $0.height.equalTo(20)
         }
         shoppingCartImageView.snp.makeConstraints{
-            $0.top.equalToSuperview().inset(120)
-            $0.trailing.equalToSuperview().inset(5)
-            $0.width.height.equalTo(14)
+            $0.top.equalToSuperview().inset(173)
+            $0.trailing.equalToSuperview().inset(18)
+            $0.width.height.equalTo(20)
         }
         productNameLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().inset(143)
+            $0.top.equalTo(productImageView.snp.bottom).offset(34)
             $0.leading.equalToSuperview()
-            $0.width.equalTo(110)
+            $0.height.equalTo(14)
         }
         priceLabel.snp.makeConstraints{
-            $0.top.equalTo(productNameLabel.snp.top).inset(33)
+            $0.top.equalTo(productNameLabel.snp.top).offset(18)
             $0.leading.equalToSuperview()
-            $0.height.equalTo(20)
+            $0.height.equalTo(17)
         }
     }
     
@@ -64,7 +65,8 @@ final class SpecialProductCollectionViewCell: UICollectionViewCell {
     
     private lazy var productImageView : UIImageView  = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 8
+        imageView.layer.cornerRadius = 13
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -92,7 +94,7 @@ final class SpecialProductCollectionViewCell: UICollectionViewCell {
     private lazy var priceLabel : UILabel = {
         let label = UILabel()
         label.textColor = GSColor.grey10
-        label.font = GSFont.b3m
+        label.font = GSFont.b2s
         return label
     }()
     

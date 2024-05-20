@@ -7,14 +7,14 @@
 
 import UIKit
 
-class HeaderReusableView: UIView {
+class HeaderReusableView: UICollectionReusableView {
 
-    init(title : String, date : String) {
+    static let identifier = "HeaderReusableViewCell"
+    
+    override init(frame : CGRect) {
         super.init(frame: .zero)
         setUI()
         setLayout()
-        headerTitleLabel.text = title
-        dateLabel.text = date
     }
 
     required init?(coder: NSCoder) {
@@ -61,6 +61,11 @@ class HeaderReusableView: UIView {
         }
     }
     
+    func configure(with title : String, date : String?) {
+        headerTitleLabel.text = title
+        dateLabel.text = date
+    }
+    
     private let headerTitleLabel : UILabel = {
         let label = UILabel()
         label.textColor = GSColor.grey10
@@ -94,5 +99,5 @@ class HeaderReusableView: UIView {
         return label
     }()
     
-
+    
 }

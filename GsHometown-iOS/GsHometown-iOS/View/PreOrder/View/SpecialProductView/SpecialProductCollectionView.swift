@@ -8,7 +8,7 @@
 import UIKit
 
 class SpecialProductCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    var specialProductData = SpecialProduct.mockData
+    var specialProductData = Product.specialProductMockData
     
     lazy var specialProductCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
