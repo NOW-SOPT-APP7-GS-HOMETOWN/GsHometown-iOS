@@ -90,6 +90,9 @@
 		AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */; };
 		AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */; };
 		AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */; };
+		AFDEB6B62BFC5E9100B99E81 /* APITarget+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEB6B52BFC5E9100B99E81 /* APITarget+All.swift */; };
+		AFDEB6B82BFC606800B99E81 /* APITarget+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEB6B72BFC606800B99E81 /* APITarget+Products.swift */; };
+		AFDEB6BC2BFC645C00B99E81 /* APITarget+Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEB6BB2BFC645C00B99E81 /* APITarget+Likes.swift */; };
 		DC7A4C152BFAEFB00081EB84 /* DetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A4C142BFAEFB00081EB84 /* DetailTabBarView.swift */; };
 		DC7A4C192BFB3D4F0081EB84 /* ScrollToTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A4C182BFB3D4F0081EB84 /* ScrollToTopButton.swift */; };
 		DCCBE2622BF7489800848D98 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBE2612BF7489800848D98 /* DetailViewController.swift */; };
@@ -177,6 +180,9 @@
 		AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceType.swift; sourceTree = "<group>"; };
 		AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceType.swift; sourceTree = "<group>"; };
+		AFDEB6B52BFC5E9100B99E81 /* APITarget+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APITarget+All.swift"; sourceTree = "<group>"; };
+		AFDEB6B72BFC606800B99E81 /* APITarget+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APITarget+Products.swift"; sourceTree = "<group>"; };
+		AFDEB6BB2BFC645C00B99E81 /* APITarget+Likes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APITarget+Likes.swift"; sourceTree = "<group>"; };
 		DC7A4C142BFAEFB00081EB84 /* DetailTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabBarView.swift; sourceTree = "<group>"; };
 		DC7A4C182BFB3D4F0081EB84 /* ScrollToTopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToTopButton.swift; sourceTree = "<group>"; };
 		DCCBE2612BF7489800848D98 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -425,6 +431,9 @@
 			isa = PBXGroup;
 			children = (
 				AFC8AC2F2BF0FD08005EAE74 /* APITarget.swift */,
+				AFDEB6B52BFC5E9100B99E81 /* APITarget+All.swift */,
+				AFDEB6B72BFC606800B99E81 /* APITarget+Products.swift */,
+				AFDEB6BB2BFC645C00B99E81 /* APITarget+Likes.swift */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -665,6 +674,7 @@
 				AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */,
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
 				AF16B19A2BFBB0CE00BF27FD /* DTO.swift in Sources */,
+				AFDEB6B62BFC5E9100B99E81 /* APITarget+All.swift in Sources */,
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
@@ -674,6 +684,7 @@
 				AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */,
 				74C5967C2BF7048400E96991 /* MenuCollectionViewCell.swift in Sources */,
 				74C596722BF6F73200E96991 /* NearStoreView.swift in Sources */,
+				AFDEB6BC2BFC645C00B99E81 /* APITarget+Likes.swift in Sources */,
 				DCCBE2622BF7489800848D98 /* DetailViewController.swift in Sources */,
 				AFC8ACB02BF22ADD005EAE74 /* UICollectionViewLayout+.swift in Sources */,
 				74C5969D2BF8CF2E00E96991 /* AllProductCollectionViewCell.swift in Sources */,
@@ -694,6 +705,7 @@
 				AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */,
 				74C5966D2BF68FF200E96991 /* PreOrderViewController.swift in Sources */,
 				74C596792BF7026600E96991 /* MenuType.swift in Sources */,
+				AFDEB6B82BFC606800B99E81 /* APITarget+Products.swift in Sources */,
 				74C596822BF7209800E96991 /* DiscountEventCollectionViewCell.swift in Sources */,
 				AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */,
 				74C596922BF88F3B00E96991 /* SpecialProductCollectionView.swift in Sources */,
@@ -871,6 +883,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://52.79.43.194:8080/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R3N359429;
@@ -900,6 +913,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://52.79.43.194:8080/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R3N359429;
