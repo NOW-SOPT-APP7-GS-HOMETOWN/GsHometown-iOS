@@ -16,15 +16,15 @@ extension DTO {
 
 extension DTO.GetHomeResponse {
     struct HomeImage: Codable {
-        let topBanner: [String]
-        let monthlyEvents: [Banner]
+        let topBanners: [String]
+        let monthlyEvents: Banner
         let bottomBanners: [String]
     }
 }
 
 extension DTO.GetHomeResponse.HomeImage {
     struct Banner: Codable {
-        let mainBanners: String
-        let subBanners: String
+        let mainBanners: [String]
+        let subBanners: [String]
     }
 }

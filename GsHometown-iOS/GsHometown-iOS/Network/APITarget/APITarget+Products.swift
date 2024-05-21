@@ -46,7 +46,7 @@ extension APITarget.Products: TargetType {
 
     var headers: [String : String]? {
         switch self {
-        case .getPreorderInfo(let getPreorderInfoRequest):
+        case .getPreorderInfo:
             return ["Content-Type": "application/json"]
         case .getDetailProduct:
             return [
