@@ -42,7 +42,9 @@
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
+		AF7AC2722BFC6BA600E39CAC /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */; };
 		AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */; };
+		AFA52C652BFCE45D00E69AB9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFA52C642BFCE45D00E69AB9 /* Kingfisher */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
@@ -53,7 +55,6 @@
 		AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC292BEF5585005EAE74 /* GSImage.swift */; };
 		AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC2F2BF0FD08005EAE74 /* APITarget.swift */; };
 		AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC372BF0FD28005EAE74 /* dummy7.swift */; };
-		AFC8AC422BF0FD5D005EAE74 /* dummy4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC412BF0FD5D005EAE74 /* dummy4.swift */; };
 		AFC8AC442BF0FD61005EAE74 /* dummy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC432BF0FD61005EAE74 /* dummy3.swift */; };
 		AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC452BF0FD67005EAE74 /* dummy1.swift */; };
 		AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC492BF0FDB8005EAE74 /* GSFont.swift */; };
@@ -134,6 +135,7 @@
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
+		AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSNavigationBar.swift; sourceTree = "<group>"; };
 		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA52C652BFCE45D00E69AB9 /* Kingfisher in Frameworks */,
 				AFC8ACA82BF215BB005EAE74 /* LookinServer in Frameworks */,
 				AFC8AC7F2BF10517005EAE74 /* SnapKit in Frameworks */,
 				AFC8AC792BF104FD005EAE74 /* Moya in Frameworks */,
@@ -348,6 +351,7 @@
 				AFC8AC752BF104C4005EAE74 /* GsPlugin.swift */,
 				AFC8AC822BF10542005EAE74 /* NetworkResult.swift */,
 				AFC8AC842BF1055F005EAE74 /* Config.swift */,
+				AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -599,6 +603,7 @@
 				AFC8AC7E2BF10517005EAE74 /* SnapKit */,
 				AFC8AC802BF10517005EAE74 /* SnapKit-Dynamic */,
 				AFC8ACA72BF215BB005EAE74 /* LookinServer */,
+				AFA52C642BFCE45D00E69AB9 /* Kingfisher */,
 			);
 			productName = "GsHometown-iOS";
 			productReference = AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */;
@@ -633,6 +638,7 @@
 				AFC8AC7A2BF1050C005EAE74 /* XCRemoteSwiftPackageReference "Then" */,
 				AFC8AC7D2BF10517005EAE74 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AFC8ACA62BF215BB005EAE74 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				AFA52C632BFCE45D00E69AB9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AFC8AC012BEF440B005EAE74 /* Products */;
 			projectDirPath = "";
@@ -735,11 +741,11 @@
 				AFC8ACB22BF25ED3005EAE74 /* EventCell.swift in Sources */,
 				AFC8AC8F2BF1EC47005EAE74 /* HomeViewController.swift in Sources */,
 				AF16B1AE2BFBB86100BF27FD /* DTO+DeleteLikeResponse.swift in Sources */,
-				AFC8AC422BF0FD5D005EAE74 /* dummy4.swift in Sources */,
 				74C5969B2BF8CEA000E96991 /* AllProductCollectionView.swift in Sources */,
 				AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */,
 				DC7A4C152BFAEFB00081EB84 /* DetailTabBarView.swift in Sources */,
 				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
+				AF7AC2722BFC6BA600E39CAC /* APIProvider.swift in Sources */,
 				AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */,
 				AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */,
 			);
@@ -962,6 +968,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AFA52C632BFCE45D00E69AB9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		AFC8AC772BF104FD005EAE74 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -997,6 +1011,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AFA52C642BFCE45D00E69AB9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFA52C632BFCE45D00E69AB9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		AFC8AC782BF104FD005EAE74 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AFC8AC772BF104FD005EAE74 /* XCRemoteSwiftPackageReference "Moya" */;
