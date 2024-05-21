@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ResuableStackView: UIStackView {
+class ReusableStackView: UIStackView {
     
     init(firstMenu: String, secondMenu: String?) {
         super.init(frame: .zero)
@@ -46,6 +46,7 @@ class ResuableStackView: UIStackView {
         if let titleLabel = button.titleLabel{
             titleLabel.font = GSFont.b2m
         }
+        button.contentHorizontalAlignment = .left
         return button
     }
 }

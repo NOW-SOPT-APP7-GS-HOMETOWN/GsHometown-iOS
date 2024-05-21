@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		740051652BFD0CCD00E2E6EF /* UserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740051642BFD0CCD00E2E6EF /* UserMenuView.swift */; };
-		740051672BFD0DFA00E2E6EF /* ResuableStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740051662BFD0DFA00E2E6EF /* ResuableStackView.swift */; };
+		740051672BFD0DFA00E2E6EF /* ReusableStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740051662BFD0DFA00E2E6EF /* ReusableStackView.swift */; };
 		7400516B2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7400516A2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift */; };
+		7400516D2BFD178200E2E6EF /* UserMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7400516C2BFD178200E2E6EF /* UserMenuType.swift */; };
 		746B985F2BFC4A450050DB71 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */; };
 		7479E0AB2BFC7460002840A9 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7479E0AA2BFC7460002840A9 /* UserInfoView.swift */; };
 		747A965C2BFC7AFF00E5FCEE /* UserRewardsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */; };
@@ -91,8 +92,9 @@
 
 /* Begin PBXFileReference section */
 		740051642BFD0CCD00E2E6EF /* UserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuView.swift; sourceTree = "<group>"; };
-		740051662BFD0DFA00E2E6EF /* ResuableStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResuableStackView.swift; sourceTree = "<group>"; };
+		740051662BFD0DFA00E2E6EF /* ReusableStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableStackView.swift; sourceTree = "<group>"; };
 		7400516A2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableMenuHeaderView.swift; sourceTree = "<group>"; };
+		7400516C2BFD178200E2E6EF /* UserMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuType.swift; sourceTree = "<group>"; };
 		746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		7479E0AA2BFC7460002840A9 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRewardsType.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */,
+				7400516C2BFD178200E2E6EF /* UserMenuType.swift */,
 				747A965D2BFC7F3300E5FCEE /* UserHistoryType.swift */,
 			);
 			path = Type;
@@ -515,7 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */,
-				740051662BFD0DFA00E2E6EF /* ResuableStackView.swift */,
+				740051662BFD0DFA00E2E6EF /* ReusableStackView.swift */,
 				7400516A2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift */,
 				747A965A2BFC7AEC00E5FCEE /* Type */,
 				746B98622BFC4A670050DB71 /* View */,
@@ -670,7 +673,7 @@
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */,
 				7479E0AB2BFC7460002840A9 /* UserInfoView.swift in Sources */,
-				740051672BFD0DFA00E2E6EF /* ResuableStackView.swift in Sources */,
+				740051672BFD0DFA00E2E6EF /* ReusableStackView.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
 				74C596882BF7E23700E96991 /* UILabel+.swift in Sources */,
 				AFC8AC262BEF46B1005EAE74 /* GSColor.swift in Sources */,
@@ -708,6 +711,7 @@
 				74C596942BF88FE600E96991 /* SpecialProductCollectionViewCell.swift in Sources */,
 				AFC8AC282BEF47C0005EAE74 /* UIColor+.swift in Sources */,
 				74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */,
+				7400516D2BFD178200E2E6EF /* UserMenuType.swift in Sources */,
 				AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */,
 				74C596992BF8CE8C00E96991 /* AllProductView.swift in Sources */,
 				740051652BFD0CCD00E2E6EF /* UserMenuView.swift in Sources */,

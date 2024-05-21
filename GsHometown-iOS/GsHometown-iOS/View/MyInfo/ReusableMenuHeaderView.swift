@@ -42,7 +42,7 @@ class ReusableMenuHeaderView: UIView {
         }
         topArrowButton.snp.makeConstraints{
             $0.top.equalToSuperview().inset(25)
-            $0.trailing.equalToSuperview().inset(16)
+            $0.trailing.equalTo(thinGrayDivider.snp.trailing)
             $0.width.height.equalTo(12)
         }
     }

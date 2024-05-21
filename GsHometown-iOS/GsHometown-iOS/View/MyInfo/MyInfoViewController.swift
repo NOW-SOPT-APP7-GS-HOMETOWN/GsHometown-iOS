@@ -17,12 +17,13 @@ class MyInfoViewController: UIViewController {
     }
     
     private func setUI() {
+        view.backgroundColor = GSColor.grey00
         view.addSubview(scrollView)
         
         scrollView.addSubview(contentView)
         contentView.isUserInteractionEnabled = true
         
-        [userInfoView].forEach{
+        [userInfoView, userMenuView].forEach{
             contentView.addSubview($0)
         }
     }
@@ -40,6 +41,12 @@ class MyInfoViewController: UIViewController {
             $0.top.leading.trailing.equalToSuperview()
             $0.height.equalTo(264)
         }
+        userMenuView.snp.makeConstraints{
+            $0.top.equalTo(userInfoView.snp.bottom).offset(31)
+            $0.leading.equalToSuperview().inset((UIScreen.main.bounds.width - 345)/2)
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
     }
     
     private lazy var scrollView : UIScrollView = {
@@ -49,6 +56,7 @@ class MyInfoViewController: UIViewController {
         return scrollView
     }()
     
-    private lazy var contentView = UIView()
+    private var contentView = UIView()
     private let userInfoView = UserInfoView()
+    private let userMenuView = UserMenuView()
 }
