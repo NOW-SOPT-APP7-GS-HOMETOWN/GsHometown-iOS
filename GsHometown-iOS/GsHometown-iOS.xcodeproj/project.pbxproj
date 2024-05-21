@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		746B985F2BFC4A450050DB71 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */; };
-		746B98612BFC4A630050DB71 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B98602BFC4A630050DB71 /* UserInfoView.swift */; };
+		7479E0AB2BFC7460002840A9 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7479E0AA2BFC7460002840A9 /* UserInfoView.swift */; };
+		747A965C2BFC7AFF00E5FCEE /* UserRewardsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */; };
+		747A965E2BFC7F3300E5FCEE /* UserHistoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A965D2BFC7F3300E5FCEE /* UserHistoryType.swift */; };
 		74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596612BF67D8500E96991 /* SegmentControl.swift */; };
 		74C5966B2BF68BD000E96991 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5966A2BF68BD000E96991 /* UIView+.swift */; };
 		74C5966D2BF68FF200E96991 /* PreOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5966C2BF68FF200E96991 /* PreOrderViewController.swift */; };
@@ -86,7 +88,9 @@
 
 /* Begin PBXFileReference section */
 		746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
-		746B98602BFC4A630050DB71 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		7479E0AA2BFC7460002840A9 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRewardsType.swift; sourceTree = "<group>"; };
+		747A965D2BFC7F3300E5FCEE /* UserHistoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistoryType.swift; sourceTree = "<group>"; };
 		74C596612BF67D8500E96991 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		74C5966A2BF68BD000E96991 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		74C5966C2BF68FF200E96991 /* PreOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOrderViewController.swift; sourceTree = "<group>"; };
@@ -190,9 +194,18 @@
 		746B98622BFC4A670050DB71 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				746B98602BFC4A630050DB71 /* UserInfoView.swift */,
+				7479E0AA2BFC7460002840A9 /* UserInfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		747A965A2BFC7AEC00E5FCEE /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */,
+				747A965D2BFC7F3300E5FCEE /* UserHistoryType.swift */,
+			);
+			path = Type;
 			sourceTree = "<group>";
 		};
 		74C5966E2BF6905000E96991 /* View */ = {
@@ -495,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */,
+				747A965A2BFC7AEC00E5FCEE /* Type */,
 				746B98622BFC4A670050DB71 /* View */,
 			);
 			path = MyInfo;
@@ -646,7 +660,7 @@
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */,
-				746B98612BFC4A630050DB71 /* UserInfoView.swift in Sources */,
+				7479E0AB2BFC7460002840A9 /* UserInfoView.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
 				74C596882BF7E23700E96991 /* UILabel+.swift in Sources */,
 				AFC8AC262BEF46B1005EAE74 /* GSColor.swift in Sources */,
@@ -700,6 +714,8 @@
 				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
 				AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */,
 				AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */,
+				747A965C2BFC7AFF00E5FCEE /* UserRewardsType.swift in Sources */,
+				747A965E2BFC7F3300E5FCEE /* UserHistoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
