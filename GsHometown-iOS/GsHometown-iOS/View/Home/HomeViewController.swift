@@ -11,8 +11,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
 
-    private var collectionView: UICollectionView? = nil
-    private var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    var collectionView: UICollectionView? = nil
+    var eventCurrentImage: UIImage = GSImage.mockEvent1!
     private let gsNavigationBar = GSNavigationBar()
 
     override func viewDidLoad() {
@@ -31,6 +31,14 @@ class HomeViewController: UIViewController {
 
     private func setUI() {
         self.view.addSubview(gsNavigationBar)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        startTimer()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimer()
     }
 
     private func setAutolayout() {
@@ -97,32 +105,6 @@ class HomeViewController: UIViewController {
             EventOfTheWeekCell.self,
             forCellWithReuseIdentifier: EventOfTheWeekCell.cellIdentifier
         )
-    }
-
-    private func addObservers() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(currentEventImageChanged),
-            name: .currentEventID,
-            object: nil
-        )
-    }
-
-    @objc
-    func currentEventImageChanged(notification: Notification) {
-        if let id = notification.userInfo?["currentEventID"] as? Int {
-            switch id {
-            case 1:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            case 2:
-                self.eventCurrentImage = GSImage.mockEvent2!
-            case 3:
-                self.eventCurrentImage = GSImage.mockEvent3!
-            default:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            }
-            collectionView!.reloadData()
-        }
     }
 }
 

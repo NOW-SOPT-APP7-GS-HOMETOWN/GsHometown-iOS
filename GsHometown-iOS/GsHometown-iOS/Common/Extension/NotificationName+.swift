@@ -9,4 +9,6 @@ import Foundation
 
 extension Notification.Name {
     static let currentEventID = Notification.Name("currentEventID")
+    static let stopTimer = Notification.Name("stopTimer")
+    static let startTimer = Notification.Name("startTimer")
 }
