@@ -101,5 +101,5 @@ enum GSImage {
     static let mockConvenientProduct = UIImage(named: "mockConvenientProduct")
     static let mockDetailMain = UIImage(named: "mockDetailMain")
     static let mockDetailInfo = UIImage(named: "mockDetailInfo")
-
+    static let mockPreorderAd = UIImage(named: "mockPreorderAd")
 }

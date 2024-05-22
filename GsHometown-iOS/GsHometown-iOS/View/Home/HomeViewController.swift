@@ -11,8 +11,10 @@ import SnapKit
 
 class HomeViewController: UIViewController {
 
-    private var collectionView: UICollectionView? = nil
-    private var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    var collectionView: UICollectionView? = nil
+    var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    var autoScrollTimer: Timer?
+    private var currentAdvertisementIndex: Int = 0
     private let gsNavigationBar = GSNavigationBar()
 
     override func viewDidLoad() {
@@ -21,7 +23,17 @@ class HomeViewController: UIViewController {
         setStyle()
         setUI()
         setAutolayout()
+        startTimer()
+        startBannerTimer()
         addObservers()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        startTimer()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimer()
     }
 
     private func setStyle() {
@@ -99,29 +111,26 @@ class HomeViewController: UIViewController {
         )
     }
 
-    private func addObservers() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(currentEventImageChanged),
-            name: .currentEventID,
-            object: nil
-        )
+    private func startBannerTimer() {
+        autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            self.scrollToNextItem()
+        }
     }
 
-    @objc
-    func currentEventImageChanged(notification: Notification) {
-        if let id = notification.userInfo?["currentEventID"] as? Int {
-            switch id {
-            case 1:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            case 2:
-                self.eventCurrentImage = GSImage.mockEvent2!
-            case 3:
-                self.eventCurrentImage = GSImage.mockEvent3!
-            default:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            }
-            collectionView!.reloadData()
+    func scrollToNextItem() {
+        self.currentAdvertisementIndex += 1
+        if currentAdvertisementIndex < Advertisement.mockDataForSmall.count {
+            let smallIndexPath = IndexPath(item: currentAdvertisementIndex, section: 0)
+            let largeIndexPath = IndexPath(item: currentAdvertisementIndex, section: 6)
+            collectionView?.scrollToItem(at: smallIndexPath, at: .centeredHorizontally, animated: true)
+            collectionView?.scrollToItem(at: largeIndexPath, at: .centeredHorizontally, animated: true)
+        } else {
+            currentAdvertisementIndex = 0
+            let smallIndexPath = IndexPath(item: currentAdvertisementIndex, section: 0)
+            let largeIndexPath = IndexPath(item: currentAdvertisementIndex, section: 6)
+            collectionView?.scrollToItem(at: smallIndexPath, at: .centeredHorizontally, animated: true)
+            collectionView?.scrollToItem(at: largeIndexPath, at: .centeredHorizontally, animated: true)
         }
     }
 }
