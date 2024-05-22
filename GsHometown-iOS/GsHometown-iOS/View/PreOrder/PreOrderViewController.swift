@@ -23,7 +23,6 @@ class PreOrderViewController: UIViewController {
         scrollView.isScrollEnabled = true
         return scrollView
     }()
-        
     
     private lazy var contentView = UIView()
     
@@ -33,6 +32,8 @@ class PreOrderViewController: UIViewController {
     let allProductView = AllProductView()
     
     private func setUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.view.backgroundColor = GSColor.grey00
         view.addSubview(scrollView)
         
         scrollView.addSubview(contentView)
@@ -50,7 +51,7 @@ class PreOrderViewController: UIViewController {
     
     private func setLayout() {
         scrollView.snp.makeConstraints{
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
+            $0.edges.equalToSuperview()
         }
         
         contentView.snp.makeConstraints{
