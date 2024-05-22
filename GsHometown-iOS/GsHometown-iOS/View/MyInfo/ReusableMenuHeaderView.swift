@@ -14,7 +14,7 @@ class ReusableMenuHeaderView: UIView {
 
     init(title: String) {
         super.init(frame: .zero)
-        menuTitle.text = title
+        menuTitleLabel.text = title
         setUI()
         setLayout()
     }
@@ -24,7 +24,7 @@ class ReusableMenuHeaderView: UIView {
     }
     
     private func setUI() {
-        [thinGrayDivider, menuTitle, topArrowButton].forEach {
+        [thinGrayDivider, menuTitleLabel, topArrowButton].forEach {
             self.addSubview($0)
         }
     }
@@ -35,7 +35,7 @@ class ReusableMenuHeaderView: UIView {
             $0.height.equalTo(1)
             $0.width.equalTo(345)
         }
-        menuTitle.snp.makeConstraints{
+        menuTitleLabel.snp.makeConstraints{
             $0.top.equalToSuperview().inset(20.5)
             $0.leading.equalToSuperview()
             $0.height.equalTo(21)
@@ -51,7 +51,7 @@ class ReusableMenuHeaderView: UIView {
         $0.backgroundColor = GSColor.grey05
     }
     
-    private lazy var menuTitle = UILabel().then{
+    private lazy var menuTitleLabel = UILabel().then{
         $0.font = GSFont.h4
         $0.textColor = GSColor.grey10
     }

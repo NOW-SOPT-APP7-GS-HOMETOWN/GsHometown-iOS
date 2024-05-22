@@ -38,11 +38,13 @@ class UserInfoView: UIView {
             $0.top.equalToSuperview().inset(2)
             $0.leading.equalToSuperview()
             $0.height.equalTo(20)
+            $0.centerY.equalToSuperview()
         }
         userNameButton.snp.makeConstraints{
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(115)
             $0.height.equalTo(20)
+            $0.centerY.equalToSuperview()
         }
         noticeGradeButton.snp.makeConstraints{
             $0.top.equalToSuperview()
@@ -102,6 +104,9 @@ class UserInfoView: UIView {
         $0.titleLabel?.font = GSFont.b2s
         $0.setImage(GSImage.arrowRight, for: .normal)
         $0.semanticContentAttribute = .forceRightToLeft
+        $0.contentHorizontalAlignment = .left
+        $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 124.5, bottom: 0, right: 0) //수정필요
     }
     
     private let rewardStackView = UIStackView().then{
@@ -162,7 +167,6 @@ class UserInfoView: UIView {
         button.imageEdgeInsets = UIEdgeInsets(top: -22, left: 26, bottom: 0, right: 0) //수정필요
         return button
     }
-  
 
     func setStyle(){
         [makeRewardStackLabelView(for: .thePopRewards),

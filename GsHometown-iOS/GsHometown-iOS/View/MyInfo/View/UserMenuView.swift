@@ -73,7 +73,7 @@ class UserMenuView: UIView {
         view.addSubview(headerView)
         headerView.snp.makeConstraints{
             $0.top.leading.trailing.equalToSuperview()
-            $0.height.equalTo(32.5)
+            $0.height.equalTo(53)
         }
         let menuCount = type.menuArray.count
         for i in 0..<(menuCount + 1) / 2 {
@@ -83,7 +83,7 @@ class UserMenuView: UIView {
             let menuStackView = ReusableStackView(firstMenu: type.menuArray[firstMenuIndex], secondMenu: (menuCount % 2 == 1 && secondMenuIndex == menuCount) ? nil : type.menuArray[secondMenuIndex])
             view.addSubview(menuStackView)
             menuStackView.snp.makeConstraints {
-                $0.top.equalTo(headerView.snp.bottom).offset(11.5 + Double(44 * i))
+                $0.top.equalTo(headerView.snp.bottom).offset(Double(44 * i))
                 $0.leading.trailing.equalToSuperview()
                 $0.height.equalTo(44)
             }

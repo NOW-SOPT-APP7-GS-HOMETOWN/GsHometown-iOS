@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 class MyInfoViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -23,7 +25,7 @@ class MyInfoViewController: UIViewController {
         scrollView.addSubview(contentView)
         contentView.isUserInteractionEnabled = true
         
-        [userInfoView, userMenuView].forEach{
+        [userInfoView, firstGrayDivider, userMenuView, secondGrayDivider, logoutView].forEach{
             contentView.addSubview($0)
         }
     }
@@ -41,11 +43,23 @@ class MyInfoViewController: UIViewController {
             $0.top.leading.trailing.equalToSuperview()
             $0.height.equalTo(264)
         }
+        firstGrayDivider.snp.makeConstraints{
+            $0.top.equalTo(userInfoView.snp.top).offset(288)
+            $0.horizontalEdges.equalToSuperview()
+        }
         userMenuView.snp.makeConstraints{
             $0.top.equalTo(userInfoView.snp.bottom).offset(31)
             $0.leading.equalToSuperview().inset((UIScreen.main.bounds.width - 345)/2)
             $0.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
+        }
+        secondGrayDivider.snp.makeConstraints{
+            $0.top.equalToSuperview().inset(1125)
+            $0.horizontalEdges.equalToSuperview()
+        }
+        logoutView.snp.makeConstraints{
+            $0.top.equalTo(secondGrayDivider.snp.bottom).offset(14)
+            $0.leading.equalToSuperview().inset((UIScreen.main.bounds.width - 345)/2)
+            $0.trailing.equalToSuperview()
         }
     }
     
@@ -58,5 +72,8 @@ class MyInfoViewController: UIViewController {
     
     private var contentView = UIView()
     private let userInfoView = UserInfoView()
+    private let firstGrayDivider = UIView.grayDivider(height: 7)
     private let userMenuView = UserMenuView()
+    private let secondGrayDivider = UIView.grayDivider(height: 11)
+    private let logoutView = ReusableStackView(firstMenu: "로그아웃", secondMenu: nil)
 }
