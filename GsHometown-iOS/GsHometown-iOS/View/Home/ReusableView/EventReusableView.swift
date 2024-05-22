@@ -38,6 +38,7 @@ final class EventReusableView: UICollectionReusableView {
         setAutoLayout()
         setDelegate()
         startTimer()
+        addObservers()
     }
 
     required init?(coder: NSCoder) {
@@ -106,12 +107,42 @@ final class EventReusableView: UICollectionReusableView {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
+}
+
+extension EventReusableView {
+    private func addObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(startTimerCalled),
+            name: .startTimer,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(stopTimerCalled),
+            name: .stopTimer, 
+            object: nil
+        )
+    }
+
+    @objc func startTimerCalled() {
+        startTimer()
+    }
+
+    @objc func stopTimerCalled() {
+        stopTimer()
+    }
 
     private func startTimer() {
         autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             self.scrollToNextItem()
         }
+    }
+
+    private func stopTimer() {
+        self.autoScrollTimer?.invalidate()
+        self.autoScrollTimer = nil
     }
 
     private func scrollToNextItem() {
@@ -136,6 +167,8 @@ final class EventReusableView: UICollectionReusableView {
             ]
         )
     }
+
+
 }
 
 extension EventReusableView: UICollectionViewDataSource {
