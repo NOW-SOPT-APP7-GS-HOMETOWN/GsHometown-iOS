@@ -17,7 +17,23 @@ class MyInfoView: UIView {
         super.init(frame: frame)
         setUI()
         setLayout()
+        setScrollButton()
     }
+    
+    private lazy var scrollView : UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.isScrollEnabled = true
+        return scrollView
+    }()
+    
+    private var contentView = UIView()
+    private let userInfoView = UserInfoView()
+    private let firstGrayDivider = UIView.grayDivider(height: 7)
+    private let userMenuView = UserMenuView()
+    private let secondGrayDivider = UIView.grayDivider(height: 11)
+    private let logoutView = ReusableStackView(firstMenu: "로그아웃", secondMenu: nil)
+    private var scrollToTopButton: ScrollToTopButton?
     
     private func setUI() {
         self.backgroundColor = GSColor.grey00
@@ -63,19 +79,15 @@ class MyInfoView: UIView {
             $0.trailing.equalToSuperview()
         }
     }
-    
-    private lazy var scrollView : UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.isScrollEnabled = true
-        return scrollView
-    }()
-    
-    private var contentView = UIView()
-    private let userInfoView = UserInfoView()
-    private let firstGrayDivider = UIView.grayDivider(height: 7)
-    private let userMenuView = UserMenuView()
-    private let secondGrayDivider = UIView.grayDivider(height: 11)
-    private let logoutView = ReusableStackView(firstMenu: "로그아웃", secondMenu: nil)
 
+    private func setScrollButton() {
+        scrollToTopButton = ScrollToTopButton(scrollView: scrollView) //해당 화면의 scrollView
+        guard let scrollToTopButton = scrollToTopButton else { return }
+        self.addSubview(scrollToTopButton)
+        
+        scrollToTopButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(20)
+            make.trailing.equalToSuperview().inset(20)
+        }
+    }
 }
