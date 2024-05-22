@@ -163,11 +163,30 @@ class UserInfoView: UIView {
         if let titleLabel = button.titleLabel{
             titleLabel.font = GSFont.b4s
         }
-        button.titleEdgeInsets = UIEdgeInsets(top: 32, left: -((button.titleLabel?.frame.width)!)-12, bottom: 0, right: 0)
-        button.imageEdgeInsets = UIEdgeInsets(top: -22, left: 26, bottom: 0, right: 0) //수정필요
+        button.titleLabel?.textAlignment = .center
+        button.titleEdgeInsets = UIEdgeInsets(top: 40, left: -24-(52-((button.titleLabel?.frame.width)!))/2, bottom: 0, right: 0)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14) //수정필요
         return button
     }
 
+    func makeStackDividerView(num : Int) -> UIStackView{
+        let stackView = UIStackView()
+        stackView.backgroundColor = .clear
+        stackView.distribution = .equalSpacing
+        stackView.axis = .horizontal
+    
+        let width = (Int(UIScreen.main.bounds.width) - 30)/(num+1)
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins.left = CGFloat(width)
+        stackView.layoutMargins.right = CGFloat(width)
+        for _ in 0..<num {
+            let stackDividerImageView = UIImageView(image: GSImage.stackDivider)
+            stackDividerImageView.clipsToBounds = true
+            stackView.addArrangedSubview(stackDividerImageView)
+        }
+        return stackView
+    }
+    
     func setStyle(){
         [makeRewardStackLabelView(for: .thePopRewards),
          makeRewardStackLabelView(for: .gsPoint),
@@ -175,12 +194,27 @@ class UserInfoView: UIView {
         ].forEach{
             rewardStackView.addArrangedSubview($0)
         }
+        let rewardStackDividerView = makeStackDividerView(num: 2)
+        rewardStackView.addSubview(rewardStackDividerView)
+        rewardStackDividerView.snp.makeConstraints{
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(22)
+            $0.centerY.equalToSuperview()
+        }
+
         [makeHistoryStackButton(for: .recentProduct),
          makeHistoryStackButton(for: .likeProduct),
          makeHistoryStackButton(for: .myReview),
          makeHistoryStackButton(for: .giftBox)
         ].forEach{
             historyStackView.addArrangedSubview($0)
+        }
+        let historyStackDividerView = makeStackDividerView(num: 3)
+        historyStackView.addSubview(historyStackDividerView)
+        historyStackDividerView.snp.makeConstraints{
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(22)
+            $0.centerY.equalToSuperview()
         }
     }
 
