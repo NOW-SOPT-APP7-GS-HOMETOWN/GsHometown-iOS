@@ -15,6 +15,7 @@
 		7479E0AB2BFC7460002840A9 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7479E0AA2BFC7460002840A9 /* UserInfoView.swift */; };
 		747A965C2BFC7AFF00E5FCEE /* UserRewardsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */; };
 		747A965E2BFC7F3300E5FCEE /* UserHistoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A965D2BFC7F3300E5FCEE /* UserHistoryType.swift */; };
+		74ACCF412BFDCB59000523B8 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ACCF402BFDCB59000523B8 /* MyInfoView.swift */; };
 		74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C596612BF67D8500E96991 /* SegmentControl.swift */; };
 		74C5966B2BF68BD000E96991 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5966A2BF68BD000E96991 /* UIView+.swift */; };
 		74C5966D2BF68FF200E96991 /* PreOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5966C2BF68FF200E96991 /* PreOrderViewController.swift */; };
@@ -113,6 +114,7 @@
 		7479E0AA2BFC7460002840A9 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		747A965B2BFC7AFF00E5FCEE /* UserRewardsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRewardsType.swift; sourceTree = "<group>"; };
 		747A965D2BFC7F3300E5FCEE /* UserHistoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistoryType.swift; sourceTree = "<group>"; };
+		74ACCF402BFDCB59000523B8 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
 		74C596612BF67D8500E96991 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		74C5966A2BF68BD000E96991 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		74C5966C2BF68FF200E96991 /* PreOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOrderViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				7479E0AA2BFC7460002840A9 /* UserInfoView.swift */,
+				74ACCF402BFDCB59000523B8 /* MyInfoView.swift */,
 				740051642BFD0CCD00E2E6EF /* UserMenuView.swift */,
 			);
 			path = View;
@@ -777,6 +780,7 @@
 				AFC8AC8F2BF1EC47005EAE74 /* HomeViewController.swift in Sources */,
 				AF16B1AE2BFBB86100BF27FD /* DTO+DeleteLikeResponse.swift in Sources */,
 				74C5969B2BF8CEA000E96991 /* AllProductCollectionView.swift in Sources */,
+				74ACCF412BFDCB59000523B8 /* MyInfoView.swift in Sources */,
 				AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */,
 				DC7A4C152BFAEFB00081EB84 /* DetailTabBarView.swift in Sources */,
 				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
