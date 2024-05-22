@@ -36,6 +36,14 @@ class HomeViewController: UIViewController {
         self.view.addSubview(gsNavigationBar)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        startTimer()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimer()
+    }
+
     private func setAutolayout() {
         gsNavigationBar.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)

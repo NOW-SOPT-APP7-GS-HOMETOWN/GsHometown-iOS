@@ -43,6 +43,9 @@
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
 		AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */; };
+		AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */; };
+		AF99AFE92BF75CEA004CC4D1 /* GSTabBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */; };
+		AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
@@ -89,6 +92,9 @@
 		AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */; };
 		AFC8ACBB2BF26E5C005EAE74 /* ConvenienceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */; };
 		AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */; };
+		AFDEB6B62BFC5E9100B99E81 /* APITarget+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEB6B52BFC5E9100B99E81 /* APITarget+All.swift */; };
+		AFDEB6B82BFC606800B99E81 /* APITarget+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEB6B72BFC606800B99E81 /* APITarget+Products.swift */; };
+		AFDEB6BC2BFC645C00B99E81 /* APITarget+Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEB6BB2BFC645C00B99E81 /* APITarget+Likes.swift */; };
 		DC7A4C152BFAEFB00081EB84 /* DetailTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A4C142BFAEFB00081EB84 /* DetailTabBarView.swift */; };
 		DC7A4C192BFB3D4F0081EB84 /* ScrollToTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A4C182BFB3D4F0081EB84 /* ScrollToTopButton.swift */; };
 		DCCBE2622BF7489800848D98 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBE2612BF7489800848D98 /* DetailViewController.swift */; };
@@ -131,6 +137,9 @@
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
 		AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSNavigationBar.swift; sourceTree = "<group>"; };
+		AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarController.swift; sourceTree = "<group>"; };
+		AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarType.swift; sourceTree = "<group>"; };
+		AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+.swift"; sourceTree = "<group>"; };
 		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +185,9 @@
 		AFC8ACB82BF26E39005EAE74 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		AFC8ACBA2BF26E5C005EAE74 /* ConvenienceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceType.swift; sourceTree = "<group>"; };
 		AFC8ACBC2BF26EBC005EAE74 /* OrderServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceType.swift; sourceTree = "<group>"; };
+		AFDEB6B52BFC5E9100B99E81 /* APITarget+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APITarget+All.swift"; sourceTree = "<group>"; };
+		AFDEB6B72BFC606800B99E81 /* APITarget+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APITarget+Products.swift"; sourceTree = "<group>"; };
+		AFDEB6BB2BFC645C00B99E81 /* APITarget+Likes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APITarget+Likes.swift"; sourceTree = "<group>"; };
 		DC7A4C142BFAEFB00081EB84 /* DetailTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabBarView.swift; sourceTree = "<group>"; };
 		DC7A4C182BFB3D4F0081EB84 /* ScrollToTopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToTopButton.swift; sourceTree = "<group>"; };
 		DCCBE2612BF7489800848D98 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -282,7 +294,7 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
-		AFBFC3C22BFBA7510067F88B /* Recovered References */ = {
+		AF782EBE2BFBA32400E1E68A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				AFC8AC412BF0FD5D005EAE74 /* dummy4.swift */,
@@ -290,12 +302,30 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		AF99AFE32BF75A09004CC4D1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */,
+				AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AF99AFEA2BF76ED8004CC4D1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		AFC8ABF72BEF440B005EAE74 = {
 			isa = PBXGroup;
 			children = (
 				AFC8AC022BEF440B005EAE74 /* GsHometown-iOS */,
 				AFC8AC012BEF440B005EAE74 /* Products */,
-				AFBFC3C22BFBA7510067F88B /* Recovered References */,
+				AF782EBE2BFBA32400E1E68A /* Recovered References */,
+				AF16B1982BFBB07900BF27FD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -368,6 +398,7 @@
 		AFC8AC1B2BEF4458005EAE74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF99AFE32BF75A09004CC4D1 /* TabBar */,
 				AFC8AC3C2BF0FD4D005EAE74 /* MyInfo */,
 				AFC8AC3B2BF0FD48005EAE74 /* Detail */,
 				AFC8AC3A2BF0FD40005EAE74 /* PreOrder */,
@@ -379,6 +410,7 @@
 		AFC8AC1C2BEF445C005EAE74 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AF99AFEA2BF76ED8004CC4D1 /* Home */,
 				AFC8AC452BF0FD67005EAE74 /* dummy1.swift */,
 			);
 			path = Controller;
@@ -432,6 +464,9 @@
 			isa = PBXGroup;
 			children = (
 				AFC8AC2F2BF0FD08005EAE74 /* APITarget.swift */,
+				AFDEB6B52BFC5E9100B99E81 /* APITarget+All.swift */,
+				AFDEB6B72BFC606800B99E81 /* APITarget+Products.swift */,
+				AFDEB6BB2BFC645C00B99E81 /* APITarget+Likes.swift */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -672,15 +707,18 @@
 				AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */,
 				AFC8AC832BF10542005EAE74 /* NetworkResult.swift in Sources */,
 				AF16B19A2BFBB0CE00BF27FD /* DTO.swift in Sources */,
+				AFDEB6B62BFC5E9100B99E81 /* APITarget+All.swift in Sources */,
 				AFC8ACBD2BF26EBC005EAE74 /* OrderServiceType.swift in Sources */,
 				AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */,
 				AFC8AC852BF1055F005EAE74 /* Config.swift in Sources */,
 				74C596882BF7E23700E96991 /* UILabel+.swift in Sources */,
+				AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */,
 				AFC8AC262BEF46B1005EAE74 /* GSColor.swift in Sources */,
 				AF16B1A22BFBB61D00BF27FD /* DTO+GetPreorderInfoRequest.swift in Sources */,
 				AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */,
 				74C5967C2BF7048400E96991 /* MenuCollectionViewCell.swift in Sources */,
 				74C596722BF6F73200E96991 /* NearStoreView.swift in Sources */,
+				AFDEB6BC2BFC645C00B99E81 /* APITarget+Likes.swift in Sources */,
 				DCCBE2622BF7489800848D98 /* DetailViewController.swift in Sources */,
 				AFC8ACB02BF22ADD005EAE74 /* UICollectionViewLayout+.swift in Sources */,
 				74C5969D2BF8CF2E00E96991 /* AllProductCollectionViewCell.swift in Sources */,
@@ -701,6 +739,7 @@
 				AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */,
 				74C5966D2BF68FF200E96991 /* PreOrderViewController.swift in Sources */,
 				74C596792BF7026600E96991 /* MenuType.swift in Sources */,
+				AFDEB6B82BFC606800B99E81 /* APITarget+Products.swift in Sources */,
 				74C596822BF7209800E96991 /* DiscountEventCollectionViewCell.swift in Sources */,
 				AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */,
 				74C596922BF88F3B00E96991 /* SpecialProductCollectionView.swift in Sources */,
@@ -729,11 +768,15 @@
 				74C596862BF73F5F00E96991 /* EventView.swift in Sources */,
 				AFC8ACB22BF25ED3005EAE74 /* EventCell.swift in Sources */,
 				AFC8AC8F2BF1EC47005EAE74 /* HomeViewController.swift in Sources */,
+				AF99AFE92BF75CEA004CC4D1 /* GSTabBarType.swift in Sources */,
+				AF16B1AE2BFBB86100BF27FD /* DTO+DeleteLikeResponse.swift in Sources */,
+				AFC8AC422BF0FD5D005EAE74 /* dummy4.swift in Sources */,
 				74C5969B2BF8CEA000E96991 /* AllProductCollectionView.swift in Sources */,
 				AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */,
 				DC7A4C152BFAEFB00081EB84 /* DetailTabBarView.swift in Sources */,
 				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
 				AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */,
+				AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */,
 				AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +919,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://52.79.43.194:8080/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R3N359429;
@@ -905,6 +949,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://52.79.43.194:8080/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R3N359429;
