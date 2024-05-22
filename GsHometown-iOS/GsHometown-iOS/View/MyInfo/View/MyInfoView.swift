@@ -9,6 +9,20 @@ import UIKit
 
 class MyInfoView: UIView {
 
+    private lazy var scrollView : UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.isScrollEnabled = true
+        return scrollView
+    }()
+    private var contentView : UIView = UIView()
+    private let userInfoView : UserInfoView = UserInfoView()
+    private let firstGrayDivider : UIView = UIView.grayDivider(height: 7)
+    private let userMenuView : UIView = UserMenuView()
+    private let secondGrayDivider : UIView = UIView.grayDivider(height: 11)
+    private let logoutView : UIView = ReusableStackView(firstMenu: "로그아웃", secondMenu: nil)
+    private var scrollToTopButton: ScrollToTopButton?
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -19,21 +33,6 @@ class MyInfoView: UIView {
         setLayout()
         setScrollButton()
     }
-    
-    private lazy var scrollView : UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.isScrollEnabled = true
-        return scrollView
-    }()
-    
-    private var contentView = UIView()
-    private let userInfoView = UserInfoView()
-    private let firstGrayDivider = UIView.grayDivider(height: 7)
-    private let userMenuView = UserMenuView()
-    private let secondGrayDivider = UIView.grayDivider(height: 11)
-    private let logoutView = ReusableStackView(firstMenu: "로그아웃", secondMenu: nil)
-    private var scrollToTopButton: ScrollToTopButton?
     
     private func setUI() {
         self.backgroundColor = GSColor.grey00

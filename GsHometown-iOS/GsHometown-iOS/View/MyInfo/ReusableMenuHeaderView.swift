@@ -12,11 +12,16 @@ import Then
 
 class ReusableMenuHeaderView: UIView {
 
+    private let thinGrayDivider : UIView = UIView()
+    private lazy var menuTitleLabel : UILabel = UILabel()
+    private let topArrowButton : UIButton = UIButton()
+    
     init(title: String) {
         super.init(frame: .zero)
         menuTitleLabel.text = title
         setUI()
         setLayout()
+        setStyle()
     }
     
     required init(coder: NSCoder) {
@@ -47,16 +52,12 @@ class ReusableMenuHeaderView: UIView {
         }
     }
     
-    private let thinGrayDivider = UIView().then{
-        $0.backgroundColor = GSColor.grey05
-    }
-    
-    private lazy var menuTitleLabel = UILabel().then{
-        $0.font = GSFont.h4
-        $0.textColor = GSColor.grey10
-    }
-    
-    private let topArrowButton = UIButton().then{
-        $0.setImage(GSImage.arrowTop, for: .normal)
+    private func setStyle(){
+        thinGrayDivider.backgroundColor = GSColor.grey05
+        
+        menuTitleLabel.font = GSFont.h4
+        menuTitleLabel.textColor = GSColor.grey10
+        
+        topArrowButton.setImage(GSImage.arrowTop, for: .normal)
     }
 }
