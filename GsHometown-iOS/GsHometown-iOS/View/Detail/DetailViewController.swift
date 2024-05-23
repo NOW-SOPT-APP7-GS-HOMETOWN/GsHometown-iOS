@@ -119,7 +119,11 @@ class DetailViewController: UIViewController {
     }
     
     @objc func heartButtonTapped() {
-        isTouched.toggle()
+        if isTouched {
+            deleteLikeData()
+        } else {
+            postLikeData()
+        }
     }
     
     private func setUI() {
@@ -234,5 +238,33 @@ class DetailViewController: UIViewController {
         self.receiptAbleLabel.text = response.isReceiveAvailable ? "수령 가능" : "수령 불가"
         self.reviewNumberLabel.text = "(\(response.reviewCount))"
         self.detailImage.kf.setImage(with: detailURL)
+    }
+    
+    private func postLikeData() {
+        let apiProvider = APIProvider<APITarget.Likes>()
+        let request = DTO.PostLikeRequest(memberId: 1, productId: 3)
+        apiProvider.request(.postLike(request)) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success:
+                self.isTouched = true
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    private func deleteLikeData() {
+        let apiProvider = APIProvider<APITarget.Likes>()
+        let request = DTO.DeleteLikeRequest(memberId: 1, productId: 3)
+        apiProvider.request(.deleteLike(request)) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success:
+                self.isTouched = false
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
