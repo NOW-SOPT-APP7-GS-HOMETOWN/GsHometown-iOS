@@ -27,9 +27,9 @@ extension APITarget.Likes: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .postLike(let postLikeRequest):
+        case .postLike:
             return .post
-        case .deleteLike(let deleteLikeRequest):
+        case .deleteLike:
             return .delete
         }
     }
