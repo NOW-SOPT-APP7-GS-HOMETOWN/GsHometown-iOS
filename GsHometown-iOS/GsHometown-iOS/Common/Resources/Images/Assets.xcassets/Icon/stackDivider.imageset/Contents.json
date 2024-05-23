@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "stackDivider.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "Property 1=btn_order_normal_andr.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

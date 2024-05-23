@@ -15,11 +15,11 @@ enum HomeSectionType: Int, CaseIterable {
     case event
     case eventOfTheWeek
     case advertisementLarge
-
+    
     var section: Int {
         return self.rawValue
     }
-
+    
     func cellForItem(
         _ collectionView: UICollectionView,
         _ indexPath: IndexPath,
@@ -33,7 +33,7 @@ enum HomeSectionType: Int, CaseIterable {
             ) as? PageCell else {
                 return UICollectionViewCell()
             }
-            cell.posterImageView.image = GSImage.mockAdSmall
+            cell.posterImageView.image = Advertisement.mockDataForSmall[indexPath.row].image
             return cell
         case .orderServices:
             guard let cell = collectionView.dequeueReusableCell(
@@ -86,11 +86,11 @@ enum HomeSectionType: Int, CaseIterable {
             ) as? PageCell else {
                 return UICollectionViewCell()
             }
-            cell.posterImageView.image = GSImage.mockAdLarge
+            cell.posterImageView.image = Advertisement.mockDataForSmall[indexPath.row].image
             return cell
         }
     }
-
+    
     func createSection() -> NSCollectionLayoutSection {
         switch self {
         case .advertisementSmall:
@@ -108,13 +108,13 @@ enum HomeSectionType: Int, CaseIterable {
         case .advertisementLarge:
             return UICollectionViewLayout.pageSection(type: .large)
         }
-
+        
     }
-
+    
     var numberOfItems: Int {
         switch self {
         case .advertisementSmall:
-            3
+            Advertisement.mockDataForSmall.count
         case .orderServices:
             2
         case .convenienceServices:
@@ -126,7 +126,7 @@ enum HomeSectionType: Int, CaseIterable {
         case .eventOfTheWeek:
             1
         case .advertisementLarge:
-            3
+            Advertisement.mockDataForLarge.count
         }
     }
 }
