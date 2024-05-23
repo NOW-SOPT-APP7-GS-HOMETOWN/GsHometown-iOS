@@ -9,14 +9,28 @@ import UIKit
 
 import SnapKit
 
-class HomeViewController: UIViewController {
+protocol HomeCoordinatorDelegate: AnyObject {
+    func goToPreOrderView()
+}
 
+final class HomeViewController: UIViewController {
+
+    var homeCoordinatorDelegate: HomeCoordinatorDelegate
     var collectionView: UICollectionView? = nil
     var eventCurrentImage: UIImage = GSImage.mockEvent1!
     var autoScrollTimer: Timer?
     private var currentAdvertisementIndex: Int = 0
     private let gsNavigationBar = GSNavigationBar()
 
+    init(homeCoordinatorDelegate: HomeCoordinatorDelegate) {
+        self.homeCoordinatorDelegate = homeCoordinatorDelegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeCollectionView()
@@ -156,7 +170,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return section.cellForItem(
             collectionView,
             indexPath,
-            currentEventImage: eventCurrentImage
+            currentEventImage: eventCurrentImage,
+            delegate: homeCoordinatorDelegate
         )
     }
 }

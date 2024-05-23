@@ -23,7 +23,8 @@ enum HomeSectionType: Int, CaseIterable {
     func cellForItem(
         _ collectionView: UICollectionView,
         _ indexPath: IndexPath,
-        currentEventImage: UIImage
+        currentEventImage: UIImage,
+        delegate: HomeCoordinatorDelegate
     ) -> UICollectionViewCell {
         switch self {
         case .advertisementSmall:
@@ -43,6 +44,7 @@ enum HomeSectionType: Int, CaseIterable {
                 return UICollectionViewCell()
             }
             cell.bindData(type: indexPath.row == 0 ? .gs25 : .gsTheFresh)
+            cell.delegate = delegate
             return cell
         case .convenienceServices:
             guard let cell = collectionView.dequeueReusableCell(
