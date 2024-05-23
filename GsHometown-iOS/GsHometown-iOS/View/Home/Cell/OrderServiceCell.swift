@@ -12,6 +12,7 @@ import Then
 
 final class OrderServiceCell: UICollectionViewCell {
 
+    weak var delegate: HomeCoordinatorDelegate?
     private let titleLabel: UILabel = UILabel()
     private let subTitleLabel: UILabel = UILabel()
     private let pickUpButton: UIButton = UIButton()
@@ -50,6 +51,7 @@ final class OrderServiceCell: UICollectionViewCell {
         preOrderButton.do {
             $0.layer.cornerRadius = 14
             $0.backgroundColor = .white
+            $0.addTarget(self, action: #selector(preorderButtonTapped), for: .touchUpInside)
         }
     }
 
@@ -92,6 +94,11 @@ final class OrderServiceCell: UICollectionViewCell {
             $0.horizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(42)
         }
+    }
+
+    @objc
+    func preorderButtonTapped(_ sender: UIButton) {
+        self.delegate?.goToPreOrderView()
     }
 
     func bindData(type: OrderServiceType) {
