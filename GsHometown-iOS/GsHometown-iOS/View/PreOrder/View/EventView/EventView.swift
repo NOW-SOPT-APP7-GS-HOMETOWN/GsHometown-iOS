@@ -8,7 +8,7 @@
 import UIKit
 
 class EventView: UIView {
-    private let discountEventHeaderView = HeaderReusableView()
+    lazy var discountEventHeaderView = HeaderReusableView()
     
     private var discountEventCollectionView : UICollectionView
     private var discountEventCollectionViewDataSource = DiscountEventCollectionView()

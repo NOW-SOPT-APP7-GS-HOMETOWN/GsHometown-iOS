@@ -56,8 +56,8 @@
 		AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */; };
 		AF99AFE92BF75CEA004CC4D1 /* GSTabBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */; };
 		AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */; };
-		AFA52C682BFD79AB00E69AB9 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA52C672BFD79AB00E69AB9 /* BannerView.swift */; };
 		AFA52C652BFCE45D00E69AB9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFA52C642BFCE45D00E69AB9 /* Kingfisher */; };
+		AFA52C682BFD79AB00E69AB9 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA52C672BFD79AB00E69AB9 /* BannerView.swift */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
@@ -68,7 +68,6 @@
 		AFC8AC2A2BEF5585005EAE74 /* GSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC292BEF5585005EAE74 /* GSImage.swift */; };
 		AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC2F2BF0FD08005EAE74 /* APITarget.swift */; };
 		AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC372BF0FD28005EAE74 /* dummy7.swift */; };
-		AFC8AC442BF0FD61005EAE74 /* dummy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC432BF0FD61005EAE74 /* dummy3.swift */; };
 		AFC8AC462BF0FD67005EAE74 /* dummy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC452BF0FD67005EAE74 /* dummy1.swift */; };
 		AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC492BF0FDB8005EAE74 /* GSFont.swift */; };
 		AFC8AC6A2BF101A9005EAE74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC8AC692BF101A9005EAE74 /* Main.storyboard */; };
@@ -341,7 +340,6 @@
 		AF782EBE2BFBA32400E1E68A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				AFC8AC412BF0FD5D005EAE74 /* dummy4.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";

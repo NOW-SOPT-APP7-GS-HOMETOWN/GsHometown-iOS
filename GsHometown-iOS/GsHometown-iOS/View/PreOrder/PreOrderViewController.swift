@@ -15,6 +15,7 @@ class PreOrderViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        getPreOrderData()
     }
     
     private lazy var scrollView : UIScrollView = {
@@ -82,6 +83,26 @@ class PreOrderViewController: UIViewController {
             $0.bottom.equalToSuperview()
         }
     }
+    
+    private func getPreOrderData() {
+        let apiProvider = APIProvider<APITarget.Products>()
+        apiProvider.request(DTO.GetPreorderInfoResponse.PreorderInfo.self,
+                            target: .getPreorderInfo(DTO.GetPreorderInfoRequest(type: "gspay"))) { [weak self] response in
+            guard let self = self else {return}
+            switch response {
+            case .success(let response):
+                let topBanners = response.topBanners
+                let headerTitle = response.headerTitle
+                let date = response.date
+                
+                self.eventView.discountEventHeaderView.configure(with: headerTitle, date: date)
+            default:
+                response.statusDescription()
+            }
+        }
+    }
+    
+    
 
 }
 
