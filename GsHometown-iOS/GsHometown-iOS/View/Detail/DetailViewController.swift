@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 class DetailViewController: UIViewController {
     
@@ -112,6 +113,7 @@ class DetailViewController: UIViewController {
         setUI()
         setAutolayout()
         setNavigation()
+        getDetailData()
     }
     
     @objc func heartButtonTapped() {
@@ -204,5 +206,31 @@ class DetailViewController: UIViewController {
     
     private func setNavigation() {
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    func getDetailData() {
+        let apiProvider = APIProvider<APITarget.Products>()
+        apiProvider.request(DTO.GetDetailProductResponse.self,
+                                target: .getDetailProduct(DTO.GetDetailProductRequest(memberId: 1, productId: 3))) { [weak self] response in
+                    guard let self = self else { return }
+            switch response {
+            case .success(let response):
+                self.updateUI(with: response.data)
+            default:
+                response.statusDescription()
+            }
+        }
+    }
+    
+    private func updateUI(with response: DTO.GetDetailProductResponse.ProductDetail) {
+        let thumbnailURL = URL(string: response.thumbnail)
+        let detailURL = URL(string: response.detailImage)
+        self.mainImage.kf.setImage(with: thumbnailURL)
+        self.mainLabel.text = response.title
+        self.isTouched = response.isLiked
+        self.priceLabel.text = "\(response.price)원"
+        self.receiptAbleLabel.text = response.isReceiveAvailable ? "수령 가능" : "수령 불가"
+        self.reviewNumberLabel.text = "(\(response.reviewCount))"
+        self.detailImage.kf.setImage(with: detailURL)
     }
 }
