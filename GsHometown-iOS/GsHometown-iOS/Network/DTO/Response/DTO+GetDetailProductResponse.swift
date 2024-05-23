@@ -9,6 +9,13 @@ import Foundation
 
 extension DTO {
     struct GetDetailProductResponse: Codable {
+        let status: Int
+        let data: ProductDetail
+    }
+}
+
+extension DTO.GetDetailProductResponse {
+    struct ProductDetail: Codable {
         let thumbnail: String
         let title: String
         let isLiked: Bool
