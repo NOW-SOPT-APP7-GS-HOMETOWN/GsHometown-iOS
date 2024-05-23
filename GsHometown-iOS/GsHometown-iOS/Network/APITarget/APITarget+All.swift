@@ -21,7 +21,7 @@ extension APITarget.All: TargetType {
     }
 
     var path: String {
-        "/api"
+        "api/"
     }
 
     var method: Moya.Method {

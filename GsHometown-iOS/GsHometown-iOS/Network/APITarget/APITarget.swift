@@ -7,5 +7,7 @@
 
 import Foundation
 
+import Moya
+
 /// NameSpace
 enum APITarget { }

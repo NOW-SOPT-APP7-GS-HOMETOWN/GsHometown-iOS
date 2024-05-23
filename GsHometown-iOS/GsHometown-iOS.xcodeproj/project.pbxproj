@@ -54,11 +54,13 @@
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
+		AF7AC2722BFC6BA600E39CAC /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */; };
 		AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */; };
 		AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */; };
 		AF99AFE92BF75CEA004CC4D1 /* GSTabBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */; };
 		AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */; };
 		AFA52C682BFD79AB00E69AB9 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA52C672BFD79AB00E69AB9 /* BannerView.swift */; };
+		AFA52C652BFCE45D00E69AB9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFA52C642BFCE45D00E69AB9 /* Kingfisher */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
 		AFBCC0E52BFE34C100D9A118 /* GSTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0E42BFE34C100D9A118 /* GSTabBarCoordinator.swift */; };
 		AFBCC0E82BFE353C00D9A118 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0E72BFE353C00D9A118 /* HomeCoordinator.swift */; };
@@ -166,6 +168,7 @@
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
+		AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSNavigationBar.swift; sourceTree = "<group>"; };
 		AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarController.swift; sourceTree = "<group>"; };
 		AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarType.swift; sourceTree = "<group>"; };
@@ -233,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA52C652BFCE45D00E69AB9 /* Kingfisher in Frameworks */,
 				AFC8ACA82BF215BB005EAE74 /* LookinServer in Frameworks */,
 				AFC8AC7F2BF10517005EAE74 /* SnapKit in Frameworks */,
 				AFC8AC792BF104FD005EAE74 /* Moya in Frameworks */,
@@ -487,6 +491,7 @@
 				AFC8AC752BF104C4005EAE74 /* GsPlugin.swift */,
 				AFC8AC822BF10542005EAE74 /* NetworkResult.swift */,
 				AFC8AC842BF1055F005EAE74 /* Config.swift */,
+				AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -747,6 +752,7 @@
 				AFC8AC7E2BF10517005EAE74 /* SnapKit */,
 				AFC8AC802BF10517005EAE74 /* SnapKit-Dynamic */,
 				AFC8ACA72BF215BB005EAE74 /* LookinServer */,
+				AFA52C642BFCE45D00E69AB9 /* Kingfisher */,
 			);
 			productName = "GsHometown-iOS";
 			productReference = AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */;
@@ -781,6 +787,7 @@
 				AFC8AC7A2BF1050C005EAE74 /* XCRemoteSwiftPackageReference "Then" */,
 				AFC8AC7D2BF10517005EAE74 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AFC8ACA62BF215BB005EAE74 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				AFA52C632BFCE45D00E69AB9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AFC8AC012BEF440B005EAE74 /* Products */;
 			projectDirPath = "";
@@ -904,6 +911,7 @@
 				AFC8AC992BF1F4BB005EAE74 /* HomeSectionType.swift in Sources */,
 				DC7A4C152BFAEFB00081EB84 /* DetailTabBarView.swift in Sources */,
 				AFC8ACAA2BF21B50005EAE74 /* ConvenienceCell.swift in Sources */,
+				AF7AC2722BFC6BA600E39CAC /* APIProvider.swift in Sources */,
 				AFC8AC302BF0FD08005EAE74 /* APITarget.swift in Sources */,
 				AF99AFEC2BF76EDE004CC4D1 /* HomeViewController+.swift in Sources */,
 				AFC8ACB92BF26E39005EAE74 /* ServiceType.swift in Sources */,
@@ -1129,6 +1137,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AFA52C632BFCE45D00E69AB9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		AFC8AC772BF104FD005EAE74 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -1164,6 +1180,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AFA52C642BFCE45D00E69AB9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFA52C632BFCE45D00E69AB9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		AFC8AC782BF104FD005EAE74 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AFC8AC772BF104FD005EAE74 /* XCRemoteSwiftPackageReference "Moya" */;
