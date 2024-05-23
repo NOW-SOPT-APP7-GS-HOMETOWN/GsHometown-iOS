@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     private let contentView = UIView()
     private let mainImage = UIImageView().then {
         $0.image = GSImage.mockDetailMain
+        $0.contentMode = .scaleAspectFit
     }
     private let infoStackView = UIStackView().then{
         $0.axis = .vertical
@@ -103,6 +104,7 @@ class DetailViewController: UIViewController {
     }
     private let detailImage = UIImageView().then {
         $0.image = GSImage.mockDetailInfo
+        $0.contentMode = .scaleAspectFit
     }
     private let tabBar = DetailTabBarView()
     
@@ -158,7 +160,7 @@ class DetailViewController: UIViewController {
             $0.top.equalTo(mainImage.snp.bottom).offset(15)
             $0.leading.equalToSuperview().inset(15)
             $0.height.equalTo(53)
-            $0.width.equalTo(170)
+            $0.width.equalTo(280)
         }
         buttonStackView.snp.makeConstraints{
             $0.top.equalTo(mainImage.snp.bottom).offset(6)
