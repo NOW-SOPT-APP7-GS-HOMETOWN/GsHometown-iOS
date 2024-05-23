@@ -7,9 +7,11 @@
 
 import UIKit
 
+import Kingfisher
+
 final class EventCell: UICollectionViewCell {
 
-    private let bannerImageView = UIImageView()
+    let bannerImageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +33,8 @@ final class EventCell: UICollectionViewCell {
         }
     }
 
-    func bindData(image: UIImage) {
-        self.bannerImageView.image = image
+    func bindData(image: String) {
+        let image = URL(string: image)
+        self.bannerImageView.kf.setImage(with: image)
     }
 }

@@ -14,7 +14,7 @@ import Kingfisher
 class HomeViewController: UIViewController {
 
     var collectionView: UICollectionView? = nil
-    var eventCurrentImage: UIImage = GSImage.mockEvent1!
+    var eventCurrentImage: String?
     var autoScrollTimer: Timer?
     private var currentAdvertisementIndex: Int = 0
     private let gsNavigationBar = GSNavigationBar()
@@ -124,9 +124,9 @@ class HomeViewController: UIViewController {
         }
     }
 
-    func scrollToNextItem() {
+    private func scrollToNextItem() {
         self.currentAdvertisementIndex += 1
-        if currentAdvertisementIndex < Advertisement.mockDataForSmall.count {
+        if currentAdvertisementIndex < advertisementSmallData.count {
             let smallIndexPath = IndexPath(item: currentAdvertisementIndex, section: 0)
             let largeIndexPath = IndexPath(item: currentAdvertisementIndex, section: 6)
             collectionView?.scrollToItem(at: smallIndexPath, at: .centeredHorizontally, animated: true)
@@ -140,7 +140,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func getHomeData() {
+    private func getHomeData() {
         let apiProvider = APIProvider<APITarget.All>()
         apiProvider.request(DTO.GetHomeResponse.self, target: .getHome) { [weak self] response in
             guard let self = self else { return }
@@ -181,7 +181,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .services:
             return ServiceType.allCases.count
         case .event:
-            return eventData.count
+            return 1
         case .eventOfTheWeek:
             return 1
         case .advertisementLarge:
@@ -241,7 +241,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             ) as? EventCell else {
                 return UICollectionViewCell()
             }
-            cell.bindData(image: eventCurrentImage)
+            cell.bindData(image: eventCurrentImage ?? "")
             return cell
         case .eventOfTheWeek:
             guard let cell = collectionView.dequeueReusableCell(
