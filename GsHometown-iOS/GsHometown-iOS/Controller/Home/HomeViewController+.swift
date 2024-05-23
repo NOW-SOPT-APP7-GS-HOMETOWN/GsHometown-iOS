@@ -20,16 +20,8 @@ extension HomeViewController {
     @objc
     func currentEventImageChanged(notification: Notification) {
         if let id = notification.userInfo?["currentEventID"] as? Int {
-            switch id {
-            case 1:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            case 2:
-                self.eventCurrentImage = GSImage.mockEvent2!
-            case 3:
-                self.eventCurrentImage = GSImage.mockEvent3!
-            default:
-                self.eventCurrentImage = GSImage.mockEvent1!
-            }
+            let eventId = id == 2 ? 0 : id + 1
+            self.eventCurrentImage = self.eventData.first { $0.id == eventId }?.item
             collectionView!.reloadData()
         }
     }

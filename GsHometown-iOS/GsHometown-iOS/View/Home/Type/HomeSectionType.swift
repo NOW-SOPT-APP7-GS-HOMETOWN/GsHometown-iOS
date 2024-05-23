@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Moya
+
 enum HomeSectionType: Int, CaseIterable {
     case advertisementSmall
     case orderServices
@@ -18,79 +20,6 @@ enum HomeSectionType: Int, CaseIterable {
     
     var section: Int {
         return self.rawValue
-    }
-    
-    func cellForItem(
-        _ collectionView: UICollectionView,
-        _ indexPath: IndexPath,
-        currentEventImage: UIImage,
-        delegate: HomeCoordinatorDelegate
-    ) -> UICollectionViewCell {
-        switch self {
-        case .advertisementSmall:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: PageCell.cellIdentifier,
-                for: indexPath
-            ) as? PageCell else {
-                return UICollectionViewCell()
-            }
-            cell.posterImageView.image = Advertisement.mockDataForSmall[indexPath.row].image
-            return cell
-        case .orderServices:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: OrderServiceCell.cellIdentifier,
-                for: indexPath
-            ) as? OrderServiceCell else {
-                return UICollectionViewCell()
-            }
-            cell.bindData(type: indexPath.row == 0 ? .gs25 : .gsTheFresh)
-            cell.delegate = delegate
-            return cell
-        case .convenienceServices:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: ConvenienceCell.cellIdentifier,
-                for: indexPath
-            ) as? ConvenienceCell else {
-                return UICollectionViewCell()
-            }
-            cell.bindData(type: ConvenienceType(rawValue: indexPath.row)!)
-            return cell
-        case .services:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: ServiceCell.cellIdentifier,
-                for: indexPath
-            ) as? ServiceCell else {
-                return UICollectionViewCell()
-            }
-            cell.bindData(type: ServiceType(rawValue: indexPath.row)!)
-            return cell
-        case .event:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: EventCell.cellIdentifier,
-                for: indexPath
-            ) as? EventCell else {
-                return UICollectionViewCell()
-            }
-            cell.bindData(image: currentEventImage)
-            return cell
-        case .eventOfTheWeek:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: EventOfTheWeekCell.cellIdentifier,
-                for: indexPath
-            ) as? EventOfTheWeekCell else {
-                return UICollectionViewCell()
-            }
-            return cell
-        case .advertisementLarge:
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: PageCell.cellIdentifier,
-                for: indexPath
-            ) as? PageCell else {
-                return UICollectionViewCell()
-            }
-            cell.posterImageView.image = Advertisement.mockDataForSmall[indexPath.row].image
-            return cell
-        }
     }
     
     func createSection() -> NSCollectionLayoutSection {
