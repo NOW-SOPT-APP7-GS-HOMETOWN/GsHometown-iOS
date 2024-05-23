@@ -10,8 +10,8 @@ import UIKit
 class EventView: UIView {
     lazy var discountEventHeaderView = HeaderReusableView()
     
-    private var discountEventCollectionView : UICollectionView
-    private var discountEventCollectionViewDataSource = DiscountEventCollectionView()
+    lazy var discountEventCollectionView : UICollectionView
+    lazy var discountEventCollectionViewDataSource = DiscountEventCollectionView()
 
     override init(frame: CGRect) {
         self.discountEventCollectionView = discountEventCollectionViewDataSource.discountEventCollectionView

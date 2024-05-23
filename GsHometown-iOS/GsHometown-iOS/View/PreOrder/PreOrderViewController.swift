@@ -94,15 +94,21 @@ class PreOrderViewController: UIViewController {
                 let topBanners = response.topBanners
                 let headerTitle = response.headerTitle
                 let date = response.date
-                
+                let products = response.products
+                for product in products {
+                    decodeProductData(product: product)
+                }
                 self.eventView.discountEventHeaderView.configure(with: headerTitle, date: date)
+                self.eventView.discountEventCollectionView.reloadData()
             default:
                 response.statusDescription()
             }
         }
     }
     
-    
-
+    private func decodeProductData(product : DTO.GetPreorderInfoResponse.PreorderInfo.Products) {
+        let discountEvent = DiscountEvent(image: product.image, title: product.title, cardPrice: product.cardPrice, price: product.price, originalPrice: product.originalPrice)
+        self.eventView.discountEventCollectionViewDataSource.discountEventData.append(discountEvent)
+    }
 }
 

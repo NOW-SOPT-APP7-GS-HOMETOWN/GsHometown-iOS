@@ -8,11 +8,11 @@
 import UIKit
 
 struct DiscountEvent {
-    let productImg : UIImage?
-    let productName : String
-    let cardDiscountPrice : String
-    let price : String
-    let originalPrice : String
+    let image : String
+    let title : String
+    let cardPrice : Int
+    let price : Int
+    let originalPrice : Int
 }
 
 extension DiscountEvent {
