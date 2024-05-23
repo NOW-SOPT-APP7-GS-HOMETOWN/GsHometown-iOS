@@ -11,8 +11,13 @@ import Moya
 import SnapKit
 import Kingfisher
 
-class HomeViewController: UIViewController {
+protocol HomeCoordinatorDelegate: AnyObject {
+    func goToPreOrderView()
+}
 
+final class HomeViewController: UIViewController {
+
+    var homeCoordinatorDelegate: HomeCoordinatorDelegate
     var collectionView: UICollectionView? = nil
     var eventCurrentImage: String?
     var autoScrollTimer: Timer?
@@ -22,6 +27,15 @@ class HomeViewController: UIViewController {
     var advertisementLargeData: [String] = []
     var eventData: [EventOfTheMonth] = []
 
+    init(homeCoordinatorDelegate: HomeCoordinatorDelegate) {
+        self.homeCoordinatorDelegate = homeCoordinatorDelegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeCollectionView()

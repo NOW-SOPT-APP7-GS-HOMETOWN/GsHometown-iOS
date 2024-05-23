@@ -48,6 +48,9 @@
 		AF16B1AA2BFBB7C800BF27FD /* DTO+PostLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16B1A92BFBB7C800BF27FD /* DTO+PostLikeResponse.swift */; };
 		AF16B1AC2BFBB85400BF27FD /* DTO+DeleteLikeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16B1AB2BFBB85400BF27FD /* DTO+DeleteLikeRequest.swift */; };
 		AF16B1AE2BFBB86100BF27FD /* DTO+DeleteLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16B1AD2BFBB86100BF27FD /* DTO+DeleteLikeResponse.swift */; };
+		AF20D3982BFE1827009702CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20D3972BFE1827009702CB /* Coordinator.swift */; };
+		AF20D39A2BFE1848009702CB /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20D3992BFE1848009702CB /* FlowCoordinator.swift */; };
+		AF20D39C2BFE1876009702CB /* PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20D39B2BFE1876009702CB /* PresentationStyle.swift */; };
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
@@ -59,6 +62,11 @@
 		AFA52C682BFD79AB00E69AB9 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA52C672BFD79AB00E69AB9 /* BannerView.swift */; };
 		AFA52C652BFCE45D00E69AB9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFA52C642BFCE45D00E69AB9 /* Kingfisher */; };
 		AFB7D1642BF6720400A2DBE9 /* ServiceReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */; };
+		AFBCC0E52BFE34C100D9A118 /* GSTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0E42BFE34C100D9A118 /* GSTabBarCoordinator.swift */; };
+		AFBCC0E82BFE353C00D9A118 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0E72BFE353C00D9A118 /* HomeCoordinator.swift */; };
+		AFBCC0EB2BFE36DC00D9A118 /* PreOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0EA2BFE36DC00D9A118 /* PreOrderCoordinator.swift */; };
+		AFBCC0EE2BFE380B00D9A118 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0ED2BFE380B00D9A118 /* DetailCoordinator.swift */; };
+		AFBCC0F02BFE4BB800D9A118 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCC0EF2BFE4BB800D9A118 /* AppCoordinator.swift */; };
 		AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */; };
 		AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */; };
 		AFC8AC082BEF440B005EAE74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AC072BEF440B005EAE74 /* ViewController.swift */; };
@@ -154,6 +162,9 @@
 		AF16B1A92BFBB7C800BF27FD /* DTO+PostLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DTO+PostLikeResponse.swift"; sourceTree = "<group>"; };
 		AF16B1AB2BFBB85400BF27FD /* DTO+DeleteLikeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DTO+DeleteLikeRequest.swift"; sourceTree = "<group>"; };
 		AF16B1AD2BFBB86100BF27FD /* DTO+DeleteLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DTO+DeleteLikeResponse.swift"; sourceTree = "<group>"; };
+		AF20D3972BFE1827009702CB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AF20D3992BFE1848009702CB /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		AF20D39B2BFE1876009702CB /* PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationStyle.swift; sourceTree = "<group>"; };
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
@@ -164,6 +175,11 @@
 		AF99AFEB2BF76EDE004CC4D1 /* HomeViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+.swift"; sourceTree = "<group>"; };
 		AFA52C672BFD79AB00E69AB9 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReusableView.swift; sourceTree = "<group>"; };
+		AFBCC0E42BFE34C100D9A118 /* GSTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarCoordinator.swift; sourceTree = "<group>"; };
+		AFBCC0E72BFE353C00D9A118 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		AFBCC0EA2BFE36DC00D9A118 /* PreOrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOrderCoordinator.swift; sourceTree = "<group>"; };
+		AFBCC0ED2BFE380B00D9A118 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		AFBCC0EF2BFE4BB800D9A118 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AFC8AC002BEF440B005EAE74 /* GsHometown-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GsHometown-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +345,16 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		AF20D3962BFE1808009702CB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AF20D3972BFE1827009702CB /* Coordinator.swift */,
+				AF20D3992BFE1848009702CB /* FlowCoordinator.swift */,
+				AF20D39B2BFE1876009702CB /* PresentationStyle.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		AF4889152BF61ACA007F9C11 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +367,6 @@
 		AF782EBE2BFBA32400E1E68A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				AFC8AC412BF0FD5D005EAE74 /* dummy4.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -349,6 +374,7 @@
 		AF99AFE32BF75A09004CC4D1 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCC0E32BFE34AA00D9A118 /* Flow */,
 				AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */,
 				AF99AFE82BF75CEA004CC4D1 /* GSTabBarType.swift */,
 			);
@@ -369,6 +395,38 @@
 				AFA52C672BFD79AB00E69AB9 /* BannerView.swift */,
 			);
 			path = BannerView;
+			sourceTree = "<group>";
+		};
+		AFBCC0E32BFE34AA00D9A118 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AFBCC0E42BFE34C100D9A118 /* GSTabBarCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		AFBCC0E62BFE353000D9A118 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AFBCC0E72BFE353C00D9A118 /* HomeCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		AFBCC0E92BFE36D400D9A118 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AFBCC0EA2BFE36DC00D9A118 /* PreOrderCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		AFBCC0EC2BFE37FF00D9A118 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AFBCC0ED2BFE380B00D9A118 /* DetailCoordinator.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		AFC8ABF72BEF440B005EAE74 = {
@@ -392,6 +450,7 @@
 		AFC8AC022BEF440B005EAE74 /* GsHometown-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF20D3962BFE1808009702CB /* Coordinator */,
 				AFC8AC172BEF4441005EAE74 /* Application */,
 				AFC8AC182BEF4447005EAE74 /* Common */,
 				AFC8AC1C2BEF445C005EAE74 /* Controller */,
@@ -409,6 +468,7 @@
 				AFC8AC032BEF440B005EAE74 /* AppDelegate.swift */,
 				AFC8AC052BEF440B005EAE74 /* SceneDelegate.swift */,
 				AFC8AC692BF101A9005EAE74 /* Main.storyboard */,
+				AFBCC0EF2BFE4BB800D9A118 /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -577,6 +637,7 @@
 		AFC8AC392BF0FD39005EAE74 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCC0E62BFE353000D9A118 /* Flow */,
 				AF4889152BF61ACA007F9C11 /* ReusableView */,
 				AFC8ACBE2BF26EDA005EAE74 /* Cell */,
 				AFC8ACB72BF26DF9005EAE74 /* Type */,
@@ -589,6 +650,7 @@
 		AFC8AC3A2BF0FD40005EAE74 /* PreOrder */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCC0E92BFE36D400D9A118 /* Flow */,
 				74C5967A2BF7045300E96991 /* Cell */,
 				74C596772BF7023200E96991 /* Type */,
 				74C5966E2BF6905000E96991 /* View */,
@@ -600,6 +662,7 @@
 		AFC8AC3B2BF0FD48005EAE74 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCC0EC2BFE37FF00D9A118 /* Flow */,
 				DC7A4C132BFAEF8E0081EB84 /* View */,
 				DCCBE2612BF7489800848D98 /* DetailViewController.swift */,
 			);
@@ -778,16 +841,20 @@
 				746B985F2BFC4A450050DB71 /* MyInfoViewController.swift in Sources */,
 				AF16B1A22BFBB61D00BF27FD /* DTO+GetPreorderInfoRequest.swift in Sources */,
 				AFC8AC932BF1EEEA005EAE74 /* PageCell.swift in Sources */,
+				AFBCC0E52BFE34C100D9A118 /* GSTabBarCoordinator.swift in Sources */,
+				AFBCC0EB2BFE36DC00D9A118 /* PreOrderCoordinator.swift in Sources */,
 				74C5967C2BF7048400E96991 /* MenuCollectionViewCell.swift in Sources */,
 				74C596722BF6F73200E96991 /* NearStoreView.swift in Sources */,
 				AFDEB6BC2BFC645C00B99E81 /* APITarget+Likes.swift in Sources */,
 				DCCBE2622BF7489800848D98 /* DetailViewController.swift in Sources */,
+				AF20D39A2BFE1848009702CB /* FlowCoordinator.swift in Sources */,
 				AFC8ACB02BF22ADD005EAE74 /* UICollectionViewLayout+.swift in Sources */,
 				74C5969D2BF8CF2E00E96991 /* AllProductCollectionViewCell.swift in Sources */,
 				74C5967E2BF7075F00E96991 /* MenuCollectionView.swift in Sources */,
 				74C596702BF6F4D600E96991 /* MainView.swift in Sources */,
 				AFC8AC042BEF440B005EAE74 /* AppDelegate.swift in Sources */,
 				AF16B1A42BFBB70D00BF27FD /* DTO+GetDetailProductResponse.swift in Sources */,
+				AF20D3982BFE1827009702CB /* Coordinator.swift in Sources */,
 				AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */,
 				AF16B1A02BFBB31200BF27FD /* DTO+GetPreorderInfoResponse.swift in Sources */,
 				AFC8AC952BF1EFA5005EAE74 /* UICollectionViewCell+.swift in Sources */,
@@ -807,6 +874,8 @@
 				74C596902BF88EB300E96991 /* SpecialProductView.swift in Sources */,
 				AFA52C682BFD79AB00E69AB9 /* BannerView.swift in Sources */,
 				AFC8AC762BF104C4005EAE74 /* GsPlugin.swift in Sources */,
+				AFBCC0F02BFE4BB800D9A118 /* AppCoordinator.swift in Sources */,
+				AFBCC0E82BFE353C00D9A118 /* HomeCoordinator.swift in Sources */,
 				AFC8AC062BEF440B005EAE74 /* SceneDelegate.swift in Sources */,
 				7400516B2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift in Sources */,
 				DC7A4C192BFB3D4F0081EB84 /* ScrollToTopButton.swift in Sources */,
@@ -817,8 +886,10 @@
 				AF16B1AA2BFBB7C800BF27FD /* DTO+PostLikeResponse.swift in Sources */,
 				AFC8AC382BF0FD28005EAE74 /* dummy7.swift in Sources */,
 				74C596942BF88FE600E96991 /* SpecialProductCollectionViewCell.swift in Sources */,
+				AFBCC0EE2BFE380B00D9A118 /* DetailCoordinator.swift in Sources */,
 				AFC8AC282BEF47C0005EAE74 /* UIColor+.swift in Sources */,
 				AF16B1AC2BFBB85400BF27FD /* DTO+DeleteLikeRequest.swift in Sources */,
+				AF20D39C2BFE1876009702CB /* PresentationStyle.swift in Sources */,
 				74C596622BF67D8500E96991 /* SegmentControl.swift in Sources */,
 				7400516D2BFD178200E2E6EF /* UserMenuType.swift in Sources */,
 				AFC8AC4A2BF0FDB8005EAE74 /* GSFont.swift in Sources */,

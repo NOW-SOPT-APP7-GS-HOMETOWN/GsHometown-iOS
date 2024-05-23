@@ -8,30 +8,33 @@
 import UIKit
 
 class AllProductView: UIView {
-    private var allProductCollectionView : UICollectionView
-    private var allProductCollectionViewDataSource = AllProductCollectionView()
+    private var allProductCollectionView: UICollectionView
+    private var allProductCollectionViewDataSource: AllProductCollectionView
 
-    override init(frame: CGRect) {
+    init(
+        frame: CGRect,
+        delegate: PreOrderCoordinatorDelegate
+    ) {
+        self.allProductCollectionViewDataSource = AllProductCollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), preOrderCoordinatorDelegate: delegate)
         self.allProductCollectionView = allProductCollectionViewDataSource.allProductCollectionView
-    
         super.init(frame: frame)
         setUI()
         setLayout()
         setDiscountEventCollectionView()
         allProductCollectionView.reloadData()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder: ) has not been implemented")
     }
-    
+
     private func setUI(){
         self.backgroundColor = GSColor.grey00
         self.addSubview(allProductCollectionView)
         self.addSubview(grayDivider)
         allProductCollectionView.isScrollEnabled = false
     }
-    
+
     private func setLayout(){
         allProductCollectionView.snp.makeConstraints{
             $0.top.equalToSuperview().offset(14)
@@ -43,7 +46,7 @@ class AllProductView: UIView {
             $0.horizontalEdges.equalToSuperview()
         }
     }
-    
+
     private func setDiscountEventCollectionView() {
         allProductCollectionView.register(
             AllProductCollectionViewCell.self,
@@ -53,7 +56,7 @@ class AllProductView: UIView {
         allProductCollectionView.dataSource = allProductCollectionViewDataSource
         allProductCollectionView.delegate = allProductCollectionViewDataSource
     }
-    
+
     private let grayDivider = grayDivider(height: 7)
 
 }
