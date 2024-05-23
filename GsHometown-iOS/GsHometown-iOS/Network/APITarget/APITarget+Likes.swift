@@ -22,7 +22,7 @@ extension APITarget.Likes: TargetType {
     }
     
     var path: String {
-        return "/api/likes"
+        return "api/likes"
     }
     
     var method: Moya.Method {
