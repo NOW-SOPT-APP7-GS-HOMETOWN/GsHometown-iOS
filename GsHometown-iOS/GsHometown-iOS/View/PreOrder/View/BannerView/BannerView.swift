@@ -9,16 +9,19 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 class BannerView: UIView {
 
-    private var collectionView: UICollectionView?
-
+    var collectionView: UICollectionView?
+    var preOrderAd : [String] = ["", "", ""]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeCollectionView()
         setUI()
         setLayout()
+        print("log :\(preOrderAd)")
     }
 
     required init?(coder: NSCoder) {
@@ -87,7 +90,7 @@ extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
         ) as? PageCell else {
             return UICollectionViewCell()
         }
-        cell.posterImageView.image = GSImage.mockPreorderAd
+        cell.posterImageView.kf.setImage(with: URL(string: preOrderAd[indexPath.row]))
         return cell
     }
 }

@@ -97,11 +97,18 @@ class PreOrderViewController: UIViewController {
                 let headerTitle = preorderInfo.headerTitle
                 let date = preorderInfo.date
                 let products = preorderInfo.products
+                
+                self.mainView.bannerView.preOrderAd = []
+                for topBanner in topBanners {
+                    self.mainView.bannerView.preOrderAd.append(topBanner)
+                }
                 for product in products {
                     decodeProductData(product: product)
                 }
                 doubleProductData()
                 self.eventView.discountEventHeaderView.configure(with: headerTitle, date: date)
+                self.mainView.bannerView.collectionView?.reloadData()
+                print(self.mainView.bannerView.preOrderAd)
                 self.eventView.discountEventCollectionView.reloadData()
             default:
                 response.statusDescription()

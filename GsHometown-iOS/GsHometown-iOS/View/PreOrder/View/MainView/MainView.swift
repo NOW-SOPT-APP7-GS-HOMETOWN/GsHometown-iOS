@@ -21,7 +21,7 @@ class MainView: UIView {
     private var menuCollectionView = MenuCollectionView()
     private let segmentControl = CustomSegmentControl(items: ["매장수령", "택배상품"])
     private let nearStoreView = NearStoreView()
-    private let bannerView = BannerView() // 이 view 아님 -> 수정 필요
+    var bannerView = BannerView()
     private var grayDivider = grayDivider(height: 7)
     private var gsNavigationBar = GSNavigationBar()
 

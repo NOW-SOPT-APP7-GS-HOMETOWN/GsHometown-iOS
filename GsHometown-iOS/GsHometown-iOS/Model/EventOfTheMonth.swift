@@ -11,4 +11,3 @@ struct EventOfTheMonth {
     let id: Int
     let item: String
 }
-
