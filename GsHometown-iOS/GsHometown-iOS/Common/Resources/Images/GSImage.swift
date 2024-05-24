@@ -88,7 +88,11 @@ enum GSImage {
     static let iconRobot = UIImage(named: "ic_robot")
     static let iconFiveStar = UIImage(named: "ic_fiveStar")
     static let stackDivider = UIImage(named: "stackDivider")
-    
+    static let backButton = UIImage(named: "backButton")
+    static let basketButton = UIImage(named: "basketButton")
+    static let homeButton = UIImage(named: "homeButton")
+    static let searchButton = UIImage(named: "searchButton")
+
     /// Mock
     static let mockAdSmall = UIImage(named: "mockAdSmall")
     static let mockAdLarge = UIImage(named: "mockAdLarge")

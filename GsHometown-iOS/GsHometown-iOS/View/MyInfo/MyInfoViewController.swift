@@ -12,7 +12,7 @@ import SnapKit
 class MyInfoViewController: UIViewController {
 
     private let rootView = MyInfoView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,5 +20,4 @@ class MyInfoViewController: UIViewController {
     override func loadView() {
         self.view = rootView
     }
-    
 }

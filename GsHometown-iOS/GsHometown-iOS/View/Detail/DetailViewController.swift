@@ -107,15 +107,17 @@ class DetailViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
     }
     private let tabBar = DetailTabBarView()
-    
+    let gsNavigationBarBackButton = GSNavigationBarWithBackButton()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        
+
         setUI()
         setAutolayout()
         setNavigation()
         getDetailData()
+        backButtonAddTarget()
     }
     
     @objc func heartButtonTapped() {
@@ -128,6 +130,7 @@ class DetailViewController: UIViewController {
     
     private func setUI() {
         self.view.addSubview(scrollView)
+        self.view.addSubview(gsNavigationBarBackButton)
         self.view.addSubview(tabBar)
         scrollView.addSubview(contentView)
         [mainImage, infoStackView, buttonStackView, receiptInfoLabel, receiptStackView,
@@ -149,8 +152,15 @@ class DetailViewController: UIViewController {
     }
     
     private func setAutolayout() {
+        gsNavigationBarBackButton.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(52)
+        }
         scrollView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(gsNavigationBarBackButton.snp.bottom)
+            $0.horizontalEdges.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
         contentView.snp.makeConstraints{
             $0.edges.width.equalToSuperview()
@@ -209,11 +219,39 @@ class DetailViewController: UIViewController {
             $0.height.equalTo(94)
         }
     }
-    
-    private func setNavigation() {
-        navigationController?.setNavigationBarHidden(true, animated: true)
+
+    func backButtonAddTarget() {
+        gsNavigationBarBackButton.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
     }
-    
+
+    @objc func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    private func setNavigation() {
+//        self.navigationController?.navigationBar.isHidden = true
+//         let firstButton = UIBarButtonItem(image: UIImage(named: "person"), style: .plain, target: self, action: #selector(firstButtonTapped))
+//
+//         let secondButton = UIBarButtonItem(image: UIImage(named: "person"), style: .plain, target: self, action: #selector(secondButtonTapped))
+//
+//         let thirdButton = UIBarButtonItem(image: UIImage(named: "person"), style: .plain, target: self, action: #selector(thirdButtonTapped))
+//
+//        self.navigationController?.navigationItem.rightBarButtonItems = [thirdButton, secondButton, firstButton]
+
+    }
+
+    @objc func firstButtonTapped() {
+        // 첫 번째 버튼이 탭될 때의 동작
+    }
+
+    @objc func secondButtonTapped() {
+        // 두 번째 버튼이 탭될 때의 동작
+    }
+
+    @objc func thirdButtonTapped() {
+        // 세 번째 버튼이 탭될 때의 동작
+    }
+
     func getDetailData() {
         let apiProvider = APIProvider<APITarget.Products>()
         apiProvider.request(DTO.GetDetailProductResponse.self,
