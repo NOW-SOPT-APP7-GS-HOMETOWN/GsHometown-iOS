@@ -15,7 +15,7 @@ final class GSTabBarController: UITabBarController {
         super.viewDidLoad()
         self.setValue(gsTabBar, forKey: "tabBar")
         setStyle()
-        setTabBarItem()
+//        setTabBarItem()
 //        setDelegate()
     }
 

@@ -45,11 +45,6 @@ enum GSTabBarType: CaseIterable {
     }
 
     var viewController: UIViewController {
-        switch self {
-        case .home:
-            HomeViewController()
-        default:
-            ViewController()
-        }
+        ViewController()
     }
 }

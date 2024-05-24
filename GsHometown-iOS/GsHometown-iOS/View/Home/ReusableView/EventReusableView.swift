@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 final class EventReusableView: UICollectionReusableView {
 
@@ -27,18 +28,19 @@ final class EventReusableView: UICollectionReusableView {
     }()
 
     static let identifier = "EventReusableView"
-    var items = EventOfTheMonth.mockData
-    var totalItemCount = 9
+    var initData: [EventOfTheMonth] = []
+    var items: [EventOfTheMonth] = []
+    var totalItemCount = 0
     private var autoScrollTimer: Timer?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        getHomeData()
+        addObservers()
         setStyle()
         setUI()
         setAutoLayout()
         setDelegate()
-        startTimer()
-        addObservers()
     }
 
     required init?(coder: NSCoder) {
@@ -120,7 +122,7 @@ extension EventReusableView {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(stopTimerCalled),
-            name: .stopTimer, 
+            name: .stopTimer,
             object: nil
         )
     }
@@ -168,7 +170,33 @@ extension EventReusableView {
         )
     }
 
-
+    private func getHomeData() {
+        let apiProvider = APIProvider<APITarget.All>()
+        apiProvider.request(
+            DTO.GetHomeResponse.self,
+            target: .getHome
+        ) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let response):
+                var items: [EventOfTheMonth] = []
+                var id = 0
+                for i in 0..<response.data.monthlyEvents.subBanners.count * 3 {
+                    items.append(EventOfTheMonth(id: id, item: response.data.monthlyEvents.subBanners[id]))
+                    id = id == 2 ? 0 : id + 1
+                }
+                self.items = items
+                self.initData = items
+                self.totalItemCount = self.items.count
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                self.startTimer()
+            default:
+                response.statusDescription()
+            }
+        }
+    }
 }
 
 extension EventReusableView: UICollectionViewDataSource {
@@ -188,9 +216,10 @@ extension EventReusableView: UICollectionViewDataSource {
             for: indexPath
         ) as? EventCell
         else { return UICollectionViewCell() }
-        cell.bindData(image: items[indexPath.row].item)
-        if totalItemCount - indexPath.row == 5 {
-            let addItem = EventOfTheMonth.addedMockData
+        let image = URL(string: items[indexPath.row].item)
+        cell.bannerImageView.kf.setImage(with: image)
+        if totalItemCount - indexPath.row == 6 {
+            let addItem = initData
             totalItemCount += 3
             addItem.forEach {
                 items.append($0)
