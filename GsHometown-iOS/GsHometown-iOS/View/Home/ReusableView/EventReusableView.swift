@@ -136,7 +136,8 @@ extension EventReusableView {
     }
 
     private func startTimer() {
-        autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] _ in
+        guard !self.items.isEmpty else { return }
+        self.autoScrollTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             self.scrollToNextItem()
         }
@@ -191,7 +192,6 @@ extension EventReusableView {
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
-                self.startTimer()
             default:
                 response.statusDescription()
             }
@@ -273,4 +273,3 @@ extension EventReusableView: UICollectionViewDelegateFlowLayout {
         )
     }
 }
-

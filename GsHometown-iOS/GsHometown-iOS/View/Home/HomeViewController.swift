@@ -228,6 +228,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             ) as? OrderServiceCell else {
                 return UICollectionViewCell()
             }
+            cell.delegate = homeCoordinatorDelegate
             cell.bindData(type: indexPath.row == 0 ? .gs25 : .gsTheFresh)
             return cell
         case .convenienceServices:
