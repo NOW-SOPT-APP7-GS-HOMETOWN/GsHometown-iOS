@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 class DetailViewController: UIViewController {
     
@@ -26,6 +27,7 @@ class DetailViewController: UIViewController {
     private let contentView = UIView()
     private let mainImage = UIImageView().then {
         $0.image = GSImage.mockDetailMain
+        $0.contentMode = .scaleAspectFit
     }
     private let infoStackView = UIStackView().then{
         $0.axis = .vertical
@@ -102,6 +104,7 @@ class DetailViewController: UIViewController {
     }
     private let detailImage = UIImageView().then {
         $0.image = GSImage.mockDetailInfo
+        $0.contentMode = .scaleAspectFit
     }
     private let tabBar = DetailTabBarView()
     
@@ -112,10 +115,15 @@ class DetailViewController: UIViewController {
         setUI()
         setAutolayout()
         setNavigation()
+        getDetailData()
     }
     
     @objc func heartButtonTapped() {
-        isTouched.toggle()
+        if isTouched {
+            deleteLikeData()
+        } else {
+            postLikeData()
+        }
     }
     
     private func setUI() {
@@ -156,7 +164,7 @@ class DetailViewController: UIViewController {
             $0.top.equalTo(mainImage.snp.bottom).offset(15)
             $0.leading.equalToSuperview().inset(15)
             $0.height.equalTo(53)
-            $0.width.equalTo(170)
+            $0.width.equalTo(280)
         }
         buttonStackView.snp.makeConstraints{
             $0.top.equalTo(mainImage.snp.bottom).offset(6)
@@ -204,5 +212,59 @@ class DetailViewController: UIViewController {
     
     private func setNavigation() {
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    func getDetailData() {
+        let apiProvider = APIProvider<APITarget.Products>()
+        apiProvider.request(DTO.GetDetailProductResponse.self,
+                                target: .getDetailProduct(DTO.GetDetailProductRequest(memberId: 1, productId: 3))) { [weak self] response in
+                    guard let self = self else { return }
+            switch response {
+            case .success(let response):
+                self.updateUI(with: response.data)
+            default:
+                response.statusDescription()
+            }
+        }
+    }
+    
+    private func updateUI(with response: DTO.GetDetailProductResponse.ProductDetail) {
+        let thumbnailURL = URL(string: response.thumbnail)
+        let detailURL = URL(string: response.detailImage)
+        self.mainImage.kf.setImage(with: thumbnailURL)
+        self.mainLabel.text = response.title
+        self.isTouched = response.isLiked
+        self.priceLabel.text = "\(response.price)원"
+        self.receiptAbleLabel.text = response.isReceiveAvailable ? "수령 가능" : "수령 불가"
+        self.reviewNumberLabel.text = "(\(response.reviewCount))"
+        self.detailImage.kf.setImage(with: detailURL)
+    }
+    
+    private func postLikeData() {
+        let apiProvider = APIProvider<APITarget.Likes>()
+        let request = DTO.PostLikeRequest(memberId: 1, productId: 3)
+        apiProvider.request(.postLike(request)) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success:
+                self.isTouched = true
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    private func deleteLikeData() {
+        let apiProvider = APIProvider<APITarget.Likes>()
+        let request = DTO.DeleteLikeRequest(memberId: 1, productId: 3)
+        apiProvider.request(.deleteLike(request)) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success:
+                self.isTouched = false
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
