@@ -8,10 +8,10 @@
 import UIKit
 
 class EventView: UIView {
-    lazy var discountEventHeaderView = HeaderReusableView()
+    var discountEventHeaderView = HeaderReusableView()
     
-    lazy var discountEventCollectionView : UICollectionView
-    lazy var discountEventCollectionViewDataSource = DiscountEventCollectionView()
+    var discountEventCollectionView : UICollectionView
+    var discountEventCollectionViewDataSource = DiscountEventCollectionView()
 
     override init(frame: CGRect) {
         self.discountEventCollectionView = discountEventCollectionViewDataSource.discountEventCollectionView
@@ -21,7 +21,6 @@ class EventView: UIView {
         setLayout()
         setDiscountEventCollectionView()
         discountEventCollectionView.reloadData()
-        discountEventHeaderView.configure(with: "[GS Pay 추가 할인] GS25 정육상품 4...", date: "2024.04.05 ~ 2024.04.27")
     }
 
     required init?(coder: NSCoder) {

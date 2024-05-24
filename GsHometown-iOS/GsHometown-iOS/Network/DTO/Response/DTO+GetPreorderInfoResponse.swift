@@ -10,6 +10,7 @@ import Foundation
 extension DTO {
     struct GetPreorderInfoResponse: Codable {
         let status: Int
+        let data: PreorderInfo
     }
 }
 

@@ -54,11 +54,11 @@ class MainView: UIView {
             $0.horizontalEdges.equalToSuperview()
         }
         titleLabel.snp.makeConstraints{
-            $0.top.equalTo(gsNavigationBar.snp.bottom).offset(15)
+            $0.top.equalTo(gsNavigationBar.snp.bottom).offset(8)
             $0.leading.equalToSuperview().inset(17)
         }
         segmentControl.snp.makeConstraints{
-            $0.top.equalTo(titleLabel.snp.bottom).offset(8)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(17)
             $0.height.equalTo(44)
             $0.horizontalEdges.equalToSuperview().inset(15)
         }
@@ -68,17 +68,17 @@ class MainView: UIView {
             $0.horizontalEdges.equalToSuperview().inset(15)
         }
         bannerView.snp.makeConstraints{
-            $0.height.equalTo(151)
+            $0.height.equalTo(155)
             $0.horizontalEdges.equalToSuperview().inset(15)
             $0.top.equalTo(nearStoreView.snp.bottom).offset(20)
         }
         menuCollectionView.snp.makeConstraints{
             $0.height.equalTo(258)
             $0.horizontalEdges.equalToSuperview().inset(15)
-            $0.top.equalTo(bannerView.snp.bottom).offset(12)
+            $0.top.equalTo(bannerView.snp.bottom).offset(7)
         }
         grayDivider.snp.makeConstraints{
-            $0.top.equalTo(menuCollectionView.snp.bottom).offset(5)
+            $0.top.equalTo(menuCollectionView.snp.bottom).offset(10)
             $0.horizontalEdges.equalToSuperview()
         }
     }

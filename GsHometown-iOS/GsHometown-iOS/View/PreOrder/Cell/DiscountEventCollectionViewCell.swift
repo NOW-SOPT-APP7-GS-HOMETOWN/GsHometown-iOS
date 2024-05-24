@@ -8,6 +8,7 @@
 import UIKit
 
 import SnapKit
+import Kingfisher
 
 final class DiscountEventCollectionViewCell: UICollectionViewCell {
     
@@ -78,11 +79,11 @@ final class DiscountEventCollectionViewCell: UICollectionViewCell {
     }
     
     func bindData(_ discountEventData : DiscountEvent) {
-        productImageView.image = discountEventData.productImg
-        productNameLabel.text = discountEventData.productName
-        cardDiscountPriceLabel.text = discountEventData.cardDiscountPrice
-        priceLabel.text = discountEventData.price
-        originalPriceLabel.strikethrough(from: discountEventData.originalPrice, at: discountEventData.originalPrice)
+        productImageView.kf.setImage(with: URL(string: discountEventData.image))
+        productNameLabel.text = discountEventData.title
+        cardDiscountPriceLabel.text = String(discountEventData.cardPrice) + "원"
+        priceLabel.text = String(discountEventData.price) + "원"
+        originalPriceLabel.strikethrough(from: String(discountEventData.originalPrice)+"점", at: String(discountEventData.originalPrice)+"점")
     }
     
     private lazy var productImageView : UIImageView  = {

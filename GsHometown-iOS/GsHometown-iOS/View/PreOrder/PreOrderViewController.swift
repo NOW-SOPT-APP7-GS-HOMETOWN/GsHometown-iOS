@@ -63,7 +63,7 @@ class PreOrderViewController: UIViewController {
         
         mainView.snp.makeConstraints{
             $0.top.equalToSuperview()
-            $0.height.equalTo(606)
+            $0.height.equalTo(651)
             $0.width.equalTo(UIScreen.main.bounds.width)
         }
         eventView.snp.makeConstraints{
@@ -86,18 +86,21 @@ class PreOrderViewController: UIViewController {
     
     private func getPreOrderData() {
         let apiProvider = APIProvider<APITarget.Products>()
-        apiProvider.request(DTO.GetPreorderInfoResponse.PreorderInfo.self,
+        apiProvider.request(DTO.GetPreorderInfoResponse.self,
                             target: .getPreorderInfo(DTO.GetPreorderInfoRequest(type: "gspay"))) { [weak self] response in
             guard let self = self else {return}
             switch response {
             case .success(let response):
-                let topBanners = response.topBanners
-                let headerTitle = response.headerTitle
-                let date = response.date
-                let products = response.products
+                let preorderInfo = response.data
+                
+                let topBanners = preorderInfo.topBanners
+                let headerTitle = preorderInfo.headerTitle
+                let date = preorderInfo.date
+                let products = preorderInfo.products
                 for product in products {
                     decodeProductData(product: product)
                 }
+                doubleProductData()
                 self.eventView.discountEventHeaderView.configure(with: headerTitle, date: date)
                 self.eventView.discountEventCollectionView.reloadData()
             default:
@@ -110,5 +113,9 @@ class PreOrderViewController: UIViewController {
         let discountEvent = DiscountEvent(image: product.image, title: product.title, cardPrice: product.cardPrice, price: product.price, originalPrice: product.originalPrice)
         self.eventView.discountEventCollectionViewDataSource.discountEventData.append(discountEvent)
     }
+    
+    private func doubleProductData() {
+        self.eventView.discountEventCollectionViewDataSource.discountEventData = self.eventView.discountEventCollectionViewDataSource.discountEventData + self.eventView.discountEventCollectionViewDataSource.discountEventData
+    } // 서버에서 내려주는 이미지 개수 부족으로 collectionView 스크롤 불가
 }
 

@@ -22,7 +22,7 @@ extension APITarget.Products: TargetType {
     }
 
     var path: String {
-        return "/api/products"
+        return "api/products"
     }
 
     var method: Moya.Method {
