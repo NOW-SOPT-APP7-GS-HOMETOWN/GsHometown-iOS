@@ -54,6 +54,7 @@
 		AF4889142BF61AB6007F9C11 /* EventOfTheMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */; };
 		AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889162BF61AD5007F9C11 /* EventReusableView.swift */; };
 		AF4889192BF61B15007F9C11 /* NotificationName+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4889182BF61B15007F9C11 /* NotificationName+.swift */; };
+		AF70871F2BFFBAC000B3565C /* MyInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70871E2BFFBABF00B3565C /* MyInfoCoordinator.swift */; };
 		AF7AC2722BFC6BA600E39CAC /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */; };
 		AF99AFE22BF7471A004CC4D1 /* GSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */; };
 		AF99AFE52BF75A38004CC4D1 /* GSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */; };
@@ -167,6 +168,7 @@
 		AF4889132BF61AB6007F9C11 /* EventOfTheMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOfTheMonth.swift; sourceTree = "<group>"; };
 		AF4889162BF61AD5007F9C11 /* EventReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventReusableView.swift; sourceTree = "<group>"; };
 		AF4889182BF61B15007F9C11 /* NotificationName+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+.swift"; sourceTree = "<group>"; };
+		AF70871E2BFFBABF00B3565C /* MyInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoCoordinator.swift; sourceTree = "<group>"; };
 		AF7AC2712BFC6BA600E39CAC /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		AF99AFE12BF7471A004CC4D1 /* GSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSNavigationBar.swift; sourceTree = "<group>"; };
 		AF99AFE42BF75A38004CC4D1 /* GSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSTabBarController.swift; sourceTree = "<group>"; };
@@ -361,6 +363,14 @@
 				AFB7D1632BF6720400A2DBE9 /* ServiceReusableView.swift */,
 			);
 			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		AF70871D2BFFBAB400B3565C /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AF70871E2BFFBABF00B3565C /* MyInfoCoordinator.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		AF782EBE2BFBA32400E1E68A /* Recovered References */ = {
@@ -671,6 +681,7 @@
 		AFC8AC3C2BF0FD4D005EAE74 /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				AF70871D2BFFBAB400B3565C /* Flow */,
 				746B985E2BFC4A450050DB71 /* MyInfoViewController.swift */,
 				740051662BFD0DFA00E2E6EF /* ReusableStackView.swift */,
 				7400516A2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift */,
@@ -879,6 +890,7 @@
 				7400516B2BFD134D00E2E6EF /* ReusableMenuHeaderView.swift in Sources */,
 				DC7A4C192BFB3D4F0081EB84 /* ScrollToTopButton.swift in Sources */,
 				74C5966B2BF68BD000E96991 /* UIView+.swift in Sources */,
+				AF70871F2BFFBAC000B3565C /* MyInfoCoordinator.swift in Sources */,
 				AFC8ACAE2BF22AB8005EAE74 /* PageType.swift in Sources */,
 				AF16B1A82BFBB7C000BF27FD /* DTO+PostLikeRequest.swift in Sources */,
 				AF4889172BF61AD5007F9C11 /* EventReusableView.swift in Sources */,

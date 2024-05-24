@@ -47,8 +47,9 @@ final class GSTabBarCoordinator: FlowCoordinator {
         }
         homeViewController.tabBarItem = homeTabBarItem
         viewControllers.append(homeViewController)
+
         GSTabBarType.allCases.forEach {
-            if $0 != .home {
+            if $0 != .home && $0 != .myInfo {
                 let tabBarItem = UITabBarItem(
                     title: nil,
                     image: $0.inactive,
@@ -60,6 +61,21 @@ final class GSTabBarCoordinator: FlowCoordinator {
                 viewControllers.append(currentViewController)
             }
         }
+
+        let myInfo = GSTabBarType.myInfo
+        let myInfoTabBarItem = UITabBarItem(
+            title: nil,
+            image: myInfo.inactive,
+            selectedImage: myInfo.active
+        )
+        let myInfoCoordinator = MyInfoCoordinator(presentationStyle: .none)
+        myInfoCoordinator.start()
+        guard let myInfoViewController = myInfoCoordinator.navigationController else {
+            return UIViewController()
+        }
+        myInfoViewController.tabBarItem = myInfoTabBarItem
+        viewControllers.append(myInfoViewController)
+
         tabBarController.setViewControllers(viewControllers, animated: true)
         return tabBarController
     }

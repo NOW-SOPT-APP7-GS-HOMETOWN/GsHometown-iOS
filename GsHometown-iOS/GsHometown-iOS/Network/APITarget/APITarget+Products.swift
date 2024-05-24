@@ -22,7 +22,12 @@ extension APITarget.Products: TargetType {
     }
 
     var path: String {
-        return "api/products"
+        switch self {
+        case .getPreorderInfo:
+            return "api/products"
+        case .getDetailProduct(let getDetailProductRequest):
+            return "api/products/\(getDetailProductRequest.productId)"
+        }
     }
 
     var method: Moya.Method {
@@ -36,11 +41,8 @@ extension APITarget.Products: TargetType {
                 parameters: ["type": getPreorderInfoRequest.type],
                 encoding: URLEncoding.default
             )
-        case .getDetailProduct(let getDetailProductRequest):
-            return .requestParameters(
-                parameters: ["productId": getDetailProductRequest.productId],
-                encoding: URLEncoding.default
-            )
+        case .getDetailProduct:
+            return .requestPlain
         }
     }
 
@@ -56,3 +58,4 @@ extension APITarget.Products: TargetType {
         }
     }
 }
+
