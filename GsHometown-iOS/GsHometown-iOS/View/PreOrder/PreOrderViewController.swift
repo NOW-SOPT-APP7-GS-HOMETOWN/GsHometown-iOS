@@ -19,6 +19,7 @@ class PreOrderViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        getPreOrderData()
     }
 
     private lazy var scrollView : UIScrollView = {
@@ -76,7 +77,7 @@ class PreOrderViewController: UIViewController {
 
         mainView.snp.makeConstraints{
             $0.top.equalToSuperview()
-            $0.height.equalTo(606)
+            $0.height.equalTo(651)
             $0.width.equalTo(UIScreen.main.bounds.width)
         }
         eventView.snp.makeConstraints{
@@ -96,6 +97,46 @@ class PreOrderViewController: UIViewController {
             $0.bottom.equalToSuperview()
         }
     }
-
+    
+    private func getPreOrderData() {
+        let apiProvider = APIProvider<APITarget.Products>()
+        apiProvider.request(DTO.GetPreorderInfoResponse.self,
+                            target: .getPreorderInfo(DTO.GetPreorderInfoRequest(type: "gspay"))) { [weak self] response in
+            guard let self = self else {return}
+            switch response {
+            case .success(let response):
+                let preorderInfo = response.data
+                
+                let topBanners = preorderInfo.topBanners
+                let headerTitle = preorderInfo.headerTitle
+                let date = preorderInfo.date
+                let products = preorderInfo.products
+                
+                self.mainView.bannerView.preOrderAd = []
+                for topBanner in topBanners {
+                    self.mainView.bannerView.preOrderAd.append(topBanner)
+                }
+                for product in products {
+                    decodeProductData(product: product)
+                }
+                doubleProductData()
+                self.eventView.discountEventHeaderView.configure(with: headerTitle, date: date)
+                self.mainView.bannerView.collectionView?.reloadData()
+                print(self.mainView.bannerView.preOrderAd)
+                self.eventView.discountEventCollectionView.reloadData()
+            default:
+                response.statusDescription()
+            }
+        }
+    }
+    
+    private func decodeProductData(product : DTO.GetPreorderInfoResponse.PreorderInfo.Products) {
+        let discountEvent = DiscountEvent(image: product.image, title: product.title, cardPrice: product.cardPrice, price: product.price, originalPrice: product.originalPrice)
+        self.eventView.discountEventCollectionViewDataSource.discountEventData.append(discountEvent)
+    }
+    
+    private func doubleProductData() {
+        self.eventView.discountEventCollectionViewDataSource.discountEventData = self.eventView.discountEventCollectionViewDataSource.discountEventData + self.eventView.discountEventCollectionViewDataSource.discountEventData
+    } // 서버에서 내려주는 이미지 개수 부족으로 collectionView 스크롤 불가
 }
 

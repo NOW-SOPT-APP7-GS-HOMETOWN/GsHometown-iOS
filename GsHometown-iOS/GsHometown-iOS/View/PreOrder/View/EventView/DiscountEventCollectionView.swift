@@ -8,7 +8,7 @@
 import UIKit
 
 class DiscountEventCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    var discountEventData = DiscountEvent.mockData
+    var discountEventData = [DiscountEvent]()
     
     lazy var discountEventCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
