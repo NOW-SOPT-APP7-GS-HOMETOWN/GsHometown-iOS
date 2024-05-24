@@ -56,7 +56,7 @@ final class SpecialProductCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func bindData(_ specialProductData : Product) {
+    func bindData(_ specialProductData : SpecialProduct) {
         productImageView.image = specialProductData.productImg
         productNameLabel.text = specialProductData.productName
         priceLabel.text = specialProductData.price

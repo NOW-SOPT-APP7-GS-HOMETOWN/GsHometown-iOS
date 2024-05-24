@@ -10,8 +10,8 @@ import UIKit
 class AllProductCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var preOrderCoordinatorDelegate: PreOrderCoordinatorDelegate
-    var sideDishProductData = Product.sideDishProductMockData
-    var convenientProductData = Product.convenientProductMockData
+    var productData : [[Product]] = []
+    var headerTitle : [String] = []
 
     init(
         frame: CGRect,
@@ -36,20 +36,12 @@ class AllProductCollectionView: UIView, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return sideDishProductData.count
-        } else {
-            return convenientProductData.count
-        }
+        return productData[section].count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllProductCollectionViewCell.identifier, for: indexPath) as? AllProductCollectionViewCell else { return UICollectionViewCell() }
-        if indexPath.section == 0 {
-            cell.bindData(sideDishProductData[indexPath.row])
-        } else {
-            cell.bindData(convenientProductData[indexPath.row])
-        }
+        cell.bindData(productData[indexPath.section][indexPath.row])
         return cell
     }
 
@@ -73,11 +65,7 @@ class AllProductCollectionView: UIView, UICollectionViewDataSource, UICollection
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader, let header =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderReusableView.identifier, for: indexPath) as? HeaderReusableView else {return UICollectionReusableView()}
-        if indexPath.section == 0 {
-            header.configure(with: "요리반찬/조리면", date: nil)
-        } else {
-            header.configure(with: "냉장간편식", date: nil)
-        }
+        header.configure(with: headerTitle[indexPath.section], date: nil)
         return header
     }
 

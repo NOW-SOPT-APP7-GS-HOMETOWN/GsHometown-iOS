@@ -96,6 +96,38 @@ class PreOrderViewController: UIViewController {
             $0.bottom.equalToSuperview()
         }
     }
+    
+    private func getPreorderCategory() {
+        let apiProvider = APIProvider<APITarget.Products>()
+        
+        apiProvider.request(DTO.GetPreorderCategoryResponse.self,
+                            target: .getPreorderInfo(DTO.GetPreorderInfoRequest(type: "category"))){ [weak self] response in
+            guard let self = self else {return}
+            switch response{
+            case .success(let response):
+                let data = response.data
+                let title = data.category
+                let products = data.products
+                
+                let categoryProducts = decodePreorderCategory(products: products)
+                
+                self.allProductView.allProductCollectionViewDataSource.headerTitle.append(title)
+                self.allProductView.allProductCollectionViewDataSource.productData.append(categoryProducts)
+            default:
+                response.statusDescription()
+            }
+        }
+        
+    }
+    
+    private func decodePreorderCategory(products: [DTO.GetPreorderCategoryResponse.PreorderCategory.Products]) -> [Product] {
+        var categoryProducts : [Product] = []
+        for product in products{
+            let categoryProduct = Product(productImg: product.image, productName: product.title, price: product.price)
+            categoryProducts.append(categoryProduct)
+        }
+        return categoryProducts
+    }
 
 }
 

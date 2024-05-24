@@ -8,6 +8,7 @@
 import UIKit
 
 import SnapKit
+import Kingfisher
 
 final class AllProductCollectionViewCell: UICollectionViewCell {
     
@@ -57,10 +58,10 @@ final class AllProductCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func bindData(_ specialProductData : Product) {
-        productImageView.image = specialProductData.productImg
-        productNameLabel.text = specialProductData.productName
-        priceLabel.text = specialProductData.price
+    func bindData(_ product : Product) {
+        productImageView.kf.setImage(with: URL(string: product.productImg))
+        productNameLabel.text = product.productName
+        priceLabel.text = String(product.price) + "원"
     }
     
     private lazy var productImageView : UIImageView  = {

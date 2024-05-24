@@ -9,7 +9,7 @@ import UIKit
 
 class AllProductView: UIView {
     private var allProductCollectionView: UICollectionView
-    private var allProductCollectionViewDataSource: AllProductCollectionView
+    var allProductCollectionViewDataSource: AllProductCollectionView
 
     init(
         frame: CGRect,
