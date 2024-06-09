@@ -1,9 +1,9 @@
 ##  About Project
 <img src="https://github.com/NOW-SOPT-APP7-GS-HOMETOWN/GsHometown-Android/assets/106955456/74553fee-2596-4cc3-aafd-80a89965ccdc" width =10% ><br>
-> SOPT 34기 전체 합동세미나  
-프로덕트 이름 : 우리동네 GS
-<br> 프로덕트 설명 : 우리동네GS iOS 앱 리디자인 프로젝트
-<br> 기간: 2024.05.11 ~ 2024.05.24
+> **SOPT 34기 전체 합동세미나**
+<br>  모바일 앱 7조
+<br>  우리동네GS iOS 앱 리디자인 프로젝트
+<br>  2024.05.11 ~ 2024.05.24
 
 
 <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=black"> <img src="https://img.shields.io/badge/UIKit-2396F3?style=for-the-badge&logo=uikit&logoColor=black">
