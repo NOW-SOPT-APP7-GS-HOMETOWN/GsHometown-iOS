@@ -15,10 +15,10 @@
 + Swift
 + UIKit
 + SnapKit
-+ RxSwift
-+ Alamofire
 + Moya
 + Kingfisher
++ MVC
++ Coordinator
 
 <br>
 <br>
